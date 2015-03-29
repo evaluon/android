@@ -1,20 +1,9 @@
 # IntelliJ project generated files
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+*.iml
+/.idea/
 
 # Operative System generated files
 .DS_Store
-
-# Built application files
-*.apk
-*.ap_
-
-# Files for the Dalvik VM
-*.dex
-
-# Java class files
-*.class
 
 # Generated files
 bin/
@@ -32,5 +21,4 @@ local.properties
 proguard/
 
 # Log Files
-*.log
->>>>>>> febe285e7f49e7daeeb83b54494422afce7fe9c8
+*.logs
