@@ -1,6 +1,6 @@
 # IntelliJ project generated files
 *.iml
-/.idea/
+.idea/
 
 # Operative System generated files
 .DS_Store
