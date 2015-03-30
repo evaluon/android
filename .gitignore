@@ -1,6 +1,6 @@
 # IntelliJ project generated files
 *.iml
-/.idea/
+.idea
 
 # Operative System generated files
 .DS_Store
@@ -10,9 +10,8 @@ bin/
 gen/
 
 # Gradle files
-/.gradle/
-/build/
-/*/build/
+/.gradle
+/*/build
 
 # Local configuration file (sdk path, etc)
 local.properties
