@@ -5,7 +5,6 @@ import android.accounts.AccountAuthenticatorActivity;
 import android.accounts.AccountManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,12 +82,12 @@ public class LoginActivity extends AccountAuthenticatorActivity
             try {
                 password = StringHasher.SHA1(password);
             } catch (NoSuchAlgorithmException e) {
-                ToastService.byResource(this, R.string.register_failed);
+                ToastService.byResource(this, R.string.message_register_failed);
             }
             loginButton.setEnabled(false);
             new AuthenticationProxy(this).password(username, password, this);
         } else {
-            ToastService.byResource(this, R.string.missing_fields);
+            ToastService.byResource(this, R.string.message_missing_fields);
         }
     }
 
@@ -130,7 +129,7 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
     @Override public void failure(RetrofitError error) {
         loginButton.setEnabled(true);
-        ToastService.byResource(this, R.string.register_failed);
+        ToastService.byResource(this, R.string.message_register_failed);
     }
 
     @Override public void onBackPressed() {

@@ -43,7 +43,7 @@ public class AccountAuthenticator extends AbstractAccountAuthenticator {
             result.putInt(AccountManager.KEY_ERROR_CODE, 1);
             result.putString(
                     AccountManager.KEY_ERROR_MESSAGE,
-                    context.getString(R.string.one_account_allowed)
+                    context.getString(R.string.message_one_account_allowed)
             );
 
             return result;

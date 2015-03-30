@@ -11,7 +11,7 @@
         android:layout_margin="10dp"
 
         android:inputType="textEmailAddress"
-        android:hint="@string/mail"/>
+        android:hint="@string/label_mail"/>
 
     <EditText
         android:id="@+id/text_password"
@@ -23,6 +23,6 @@
         android:layout_marginBottom="15dp"
 
         android:inputType="textPassword"
-        android:hint="@string/password"/>
+        android:hint="@string/label_password"/>
 
 </merge>

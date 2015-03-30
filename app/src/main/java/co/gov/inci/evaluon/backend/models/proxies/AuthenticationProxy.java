@@ -8,7 +8,7 @@ import co.gov.inci.evaluon.backend.models.proxies.definers.ApiProxy;
 import retrofit.Callback;
 
 /**
- * Created by pandres95 on 19/08/14.
+ * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>
  */
 public class AuthenticationProxy extends ApiProxy<Authentication> {
 

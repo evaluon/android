@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Evaluon</string>
-
-    <!-- API -->
-    <string name="endpointUrl" translatable="false">http://evaluon.boolinc.co</string>
-    <string name="client_id" translatable="false">administrator</string>
-    <string name="client_secret" translatable="false">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>
-
-    <!-- Splash Activity -->
-    <string name="title_activity_splash" translatable="false">Evaluon</string>
 
     <!-- Account Login / Register -->
     <string name="label_mail">Correo</string>
     <string name="label_password">Contraseña</string>
     <string name="label_login">Iniciar Sesión</string>
     <string name="label_register">Registrarse</string>
-    <string name="label_register_send">Registrar</string>
+    <string name="label_register_send">Registrarse</string>
 
     <string name="label_id">Número de documento</string>
     <string name="label_name">Nombres</string>
@@ -26,11 +17,10 @@
 
     <!-- Main Activity -->
     <string name="title_activity_main">Menú Principal</string>
-
-    <string name="label_evaluate">Evalúate</string>
-    <string name="descriptor_evaluate">Reta tu conocimiento y prepárate para tus pruebas</string>
     <string name="label_evaluation">Evaluación</string>
     <string name="descriptor_evaluation">Encuentra las pruebas que debes presentar según su asignatura</string>
+    <string name="label_evaluate">Evalúate</string>
+    <string name="descriptor_evaluate">Reta tu conocimiento y prepárate para tus pruebas</string>
     <string name="label_results">Resultados</string>
     <string name="descriptor_results">Revisa el puntaje en poco tiempo y la retroalimentación para mejorar</string>
     <string name="label_average">Promedio</string>
@@ -44,8 +34,8 @@
     <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
     <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
     <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
+
     <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
     <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
-
 
 </resources>

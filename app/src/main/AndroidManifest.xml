@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.gov.inci.evaluon">
+    package="co.gov.inci.evaluon" >
 
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true" android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme">
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
 
         <!-- Application Activities -->
-        <activity android:name=".gui.controllers.activities.LoginActivity"
-            android:label="@string/login">
+        <activity
+            android:name=".gui.controllers.activities.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".gui.controllers.activities.LoginActivity"
+            android:label="@string/label_login" />
         <!-- /Application Activities -->
 
+
         <!-- Application Services -->
-        <service android:name=".backend.services.accounts.Authenticator">
+        <service android:name=".backend.services.accounts.Authenticator" >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
-            <meta-data android:name="android.accounts.AccountAuthenticator"
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
         </service>
         <!-- /Application Services -->
 
+        <activity
+            android:name=".gui.controllers.activities.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
 
 </manifest>

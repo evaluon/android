@@ -17,8 +17,8 @@ public class StringHasher {
                 '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         StringBuilder buf = new StringBuilder();
         for (byte j : b) {
-            buf.append(hexDigit[(b[j] >> 4) & 0x0f]);
-            buf.append(hexDigit[b[j] & 0x0f]);
+            buf.append(hexDigit[(j >> 4) & 0x0f]);
+            buf.append(hexDigit[j & 0x0f]);
         }
         return buf.toString();
     }

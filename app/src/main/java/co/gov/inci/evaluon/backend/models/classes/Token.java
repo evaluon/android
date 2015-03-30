@@ -15,6 +15,10 @@ import java.io.Serializable;
         this("", "", "");
     }
 
+    public Token(Token token){
+        this(token.getAccessToken(), token.getRefreshToken(), token.getTokenType());
+    }
+
     public Token(String accessToken, String refreshToken, String tokenType) {
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
