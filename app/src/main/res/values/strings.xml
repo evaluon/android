@@ -1,4 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Evaluon</string>
+
+    <!-- API -->
+    <string name="endpointUrl">http://evaluon.boolinc.co</string>
+    <string name="client_id">administrator</string>
+    <string name="client_secret">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>
+
+    <!-- Common Strings -->
+    <string name="settings">Configuraciones</string>
+    <string name="accept">Acepto</string>
+
+    <!-- Account Login -->
+    <string name="mail">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="login_facebook">Entrar con facebook</string>
+    <string name="action_register">Registrarse</string>
+
+    <!-- Account Register -->
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="names">Nombres</string>
+    <string name="surnames">Apellidos</string>
+    <string name="birthday">Fecha de nacimiento</string>
+    <string name="mobile">Celular</string>
+
+    <string name="terms">Términos y condiciones</string>
+    <string name="create_account">Crear Cuenta</string>
+
+    <!-- Authentication Service -->
+    <string name="one_account_allowed">Solo una cuenta permitida al tiempo</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="consultar">Consulta</string>
+    <string name="tratamiento">Tratamiento</string>
+    <string name="products">Productos</string>
+    <string name="histories">Historial Clínico</string>
+    <string name="professionals">Profesionales</string>
+
+    <!-- Main Activity -->
+    <string name="create_acount">Crear Cuenta</string>
+    <string name="resgister_now">Registrate ahora!</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+
+    <!--Form create acount-->
+    <string name="name">Nombre</string>
+    <string name="phone">Telefono</string>
+    <string name="data">Fecha de Nacimiento</string>
+    <string name="email">Correo electronico</string>
+
+    <!-- Toast messages -->
+    <string name="missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
+    <string name="register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
+    <string name="send_key">Enviar</string>
+
+
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditText
+        android:id="@+id/text_mail"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+
+        android:inputType="textEmailAddress"
+        android:hint="@string/mail"/>
+
+    <EditText
+        android:id="@+id/text_password"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:layout_marginBottom="15dp"
+
+        android:inputType="textPassword"
+        android:hint="@string/password"/>
+
+</merge>
