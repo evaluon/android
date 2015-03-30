@@ -11,8 +11,8 @@ gen
 
 # Gradle files
 .gradle
-gradle/
-build/
+/gradle/
+/build/
 /*/build/
 
 # Local configuration file (sdk path, etc)
