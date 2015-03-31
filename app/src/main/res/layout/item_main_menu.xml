@@ -7,16 +7,22 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-        <TextView
-            android:id="@+id/button_item_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+    <!-- For text views, we add the text, so it's read by
+    TalkBack/another reader -->
+    <TextView
+        android:id="@+id/button_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
 
-        <com.caverock.androidsvg.SVGImageView
-            android:id="@+id/button_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+    <!-- For images, like this, we add the contentDescriptor,
+    so it's read by TalkBack/another reader -->
+    <com.caverock.androidsvg.SVGImageView
+        android:id="@+id/button_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
 
 </LinearLayout>

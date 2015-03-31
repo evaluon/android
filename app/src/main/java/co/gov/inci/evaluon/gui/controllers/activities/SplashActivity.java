@@ -50,11 +50,13 @@ public class SplashActivity extends ActionBarActivity implements Callback<ApiRes
                 }
             } catch(Exception ex){
                 ToastService.byResource(SplashActivity.this, R.string.message_client_register_failed);
+                finish();
             }
         }
 
         @Override public void failure(RetrofitError error) {
             ToastService.byResource(SplashActivity.this, R.string.message_client_request_failed);
+            finish();
         }
     };
 

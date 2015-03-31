@@ -15,7 +15,14 @@
 
     <string name="create_account">Crear Cuenta</string>
 
-    <!-- Main Activity -->
+    <!-- Application Messages -->
+    <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
+    <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
+    <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
+    <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
+    <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
+
+    <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>
     <string name="label_evaluation">Evaluación</string>
     <string name="descriptor_evaluation">Encuentra las pruebas que debes presentar según su asignatura</string>
@@ -29,13 +36,10 @@
     <string name="descriptor_settings">Configura tu aplicación</string>
     <string name="label_logout">Cerrar sesión</string>
     <string name="descriptor_logout">Cierra esta sesión</string>
+    <string name="title_activity_settings">Configuraciones</string>
+    <string name="label_change_password">Cambiar contraseña</string>
+    <string name="descriptor_change_password">Cambia la contraseña</string>
 
-    <!-- Application Messages -->
-    <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
-    <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
-    <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
-
-    <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
-    <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
+    <!-- Settings menu -->
 
 </resources>

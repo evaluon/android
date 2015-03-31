@@ -48,6 +48,14 @@
             android:name=".gui.controllers.activities.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".gui.controllers.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".gui.controllers.activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.gov.inci.evaluon.gui.controllers.activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -2,8 +2,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowBackground">@color/white</item>
+        <item name="android:actionBarStyle">@style/InciActionBar</item>
+    </style>
+
+    <style name="InciActionBar" parent="AppTheme">
+        <item name="android:background">@drawable/action_bar_background</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
