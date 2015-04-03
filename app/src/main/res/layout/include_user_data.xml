@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/item_padding"
+
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_item" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_id" />
+
+        <EditText
+            android:id="@+id/id_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_id"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_item"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_name" />
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_item"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_surname" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_surname"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_item"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_birthday" />
+
+        <EditText
+            android:id="@+id/birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_birthday"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_item"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_gender" />
+
+        <RadioGroup
+            android:id="@+id/gender_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/option_gender_male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_male" />
+            <RadioButton
+                android:id="@+id/option_gender_female"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_female" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_item"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_label"
+            android:layout_width="wrap_content"
+            android:text="@string/label_disabilities"
+            android:contentDescription="@string/descriptor_disabilities" />
+
+        <RadioGroup
+            android:id="@+id/disability_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/option_disability_none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_no_disability" />
+            <RadioButton
+                android:id="@+id/option_disability_blind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_blind" />
+            <RadioButton
+                android:id="@+id/option_disability_low_vision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_low_vision" />
+            <RadioButton
+                android:id="@+id/option_disability_blind_deaf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/option_blind_deaf" />
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>

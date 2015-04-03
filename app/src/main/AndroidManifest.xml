@@ -11,50 +11,67 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
+        android:logo="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-
-        <!-- Application Activities -->
-        <activity
-            android:name=".gui.controllers.activities.SplashActivity"
-            android:label="@string/title_activity_splash"
-            android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar.Fullscreen" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".gui.controllers.activities.LoginActivity"
-            android:label="@string/label_login" />
-        <!-- /Application Activities -->
-
+        android:theme="@style/Theme.Inci" >
 
         <!-- Application Services -->
         <service android:name=".backend.services.accounts.Authenticator" >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
-
             <meta-data
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
         </service>
         <!-- /Application Services -->
 
+
+        <!-- Application Activities -->
         <activity
-            android:name=".gui.controllers.activities.MainActivity"
+            android:name=".gui.controllers.activities.account.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:noHistory="true"
+            android:theme="@style/Theme.Inci.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.controllers.activities.account.LoginActivity"
+            android:label="@string/label_login" />
+        <activity
+            android:name=".gui.controllers.activities.home.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".gui.controllers.activities.SettingsActivity"
+            android:name=".gui.controllers.activities.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".gui.controllers.activities.MainActivity" >
+            android:parentActivityName=".gui.controllers.activities.home.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="co.gov.inci.evaluon.gui.controllers.activities.MainActivity" />
+                android:value=".gui.controllers.activities.home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.activities.settings.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:parentActivityName=".gui.controllers.activities.settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.gov.inci.evaluon.gui.controllers.activities.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.activities.account.LogoutActivity"
+            android:label="@string/title_activity_logout" />
+        <activity
+            android:name=".gui.controllers.activities.settings.UpdateUserActivity"
+            android:label="@string/title_activity_update_profile"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName=".gui.controllers.activities.settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.gov.inci.evaluon.gui.controllers.activities.settings.SettingsActivity" />
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.gui.controllers.activities;
+package co.gov.inci.evaluon.gui.controllers.activities.account;
 
 import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
@@ -11,10 +11,12 @@ import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.classes.Token;
 import co.gov.inci.evaluon.backend.models.interfaces.User;
 import co.gov.inci.evaluon.backend.models.proxies.AuthenticationProxy;
+import co.gov.inci.evaluon.backend.models.proxies.UserProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.accounts.helpers.AccountHelper;
 import co.gov.inci.evaluon.backend.services.accounts.helpers.ClientToken;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
+import co.gov.inci.evaluon.gui.controllers.activities.home.MainActivity;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -23,6 +25,7 @@ import retrofit.client.Response;
  * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>
  */
 public class SplashActivity extends ActionBarActivity implements Callback<ApiResponse<User>> {
+    private String TAG = "Splash";
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,11 +70,13 @@ public class SplashActivity extends ActionBarActivity implements Callback<ApiRes
     }
 
     @Override public void failure(RetrofitError error) {
+        Log.e(TAG, "", error);
         finish();
     }
 
 
     public void getUser() {
-        success(null, null);
+        new UserProxy(this).retrieve(this);
     }
+
 }

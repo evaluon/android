@@ -13,7 +13,7 @@ import retrofit.Callback;
 public class AuthenticationProxy extends ApiProxy<Authentication> {
 
     public AuthenticationProxy(Context context){
-        super(context, Authentication.class);
+        super(context, Authentication.class, false);
     }
 
     public void password(String username, String password, Callback<Token> callback){

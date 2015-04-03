@@ -1,6 +1,7 @@
 package co.gov.inci.evaluon.gui.adapters.listadapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,10 @@ public class MainMenuListAdapter extends ArrayAdapter<MainMenuItem> {
                     getContext()
             ).inflate(R.layout.item_main_menu, parent, false);
         }
+        if(item.getIntent() != null){
+            convertView.setTag(item.getIntent());
+            convertView.setOnClickListener(itemClickListener);
+        }
         // Lookup view for data population
         TextView label = (TextView) convertView.findViewById(R.id.button_item_label);
         SVGImageView svg = (SVGImageView) convertView.findViewById(R.id.button_item);
@@ -41,5 +46,11 @@ public class MainMenuListAdapter extends ArrayAdapter<MainMenuItem> {
         // Return the completed view to render on screen
         return convertView;
     }
+
+    View.OnClickListener itemClickListener = new View.OnClickListener() {
+        @Override public void onClick(View v) {
+            getContext().startActivity((Intent)v.getTag());
+        }
+    };
 
 }

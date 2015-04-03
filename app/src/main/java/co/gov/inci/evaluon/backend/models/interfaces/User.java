@@ -9,44 +9,36 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+import co.gov.inci.evaluon.backend.models.classes.Student;
 import co.gov.inci.evaluon.backend.models.converters.JavascriptDateDeserializer;
 
 /**
  * @author Pablo Dorado <pandres95@boolinc.co>
  */
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "RoleId")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "role")
 @JsonSubTypes({
-
+        @JsonSubTypes.Type(name = "1", value = Student.class)
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
 public interface User {
 
-    @JsonProperty("id") int getId();
+    @JsonProperty("id") String getId();
 
-    @JsonProperty("firstName")
+    @JsonProperty("first_name")
     String getFirstName();
-    @JsonProperty("middleName")
+    @JsonProperty("middle_name")
     String getMiddleName();
-    @JsonProperty("lastName")
+    @JsonProperty("last_name")
     String getLastName();
-    @JsonProperty("fullName")
-    String getFullName();
 
-    @JsonProperty("email")
+    @JsonProperty("mail")
     String getEmail();
     @JsonProperty("password")
     String getPassword();
 
-    @JsonProperty("phone")
-    String getPhone();
-    @JsonProperty("mobile")
-    String getMobile();
-    @JsonProperty("imageUrl")
-    String getImageUrl() throws UnsupportedEncodingException;
-
     @JsonDeserialize(using = JavascriptDateDeserializer.class )
-    @JsonProperty("birthday")
+    @JsonProperty("birth_date")
     Date getBirthday();
 
 }

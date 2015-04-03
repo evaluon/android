@@ -1,5 +1,6 @@
-package co.gov.inci.evaluon.gui.controllers.activities;
+package co.gov.inci.evaluon.gui.controllers.activities.home;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.widget.GridView;
@@ -7,6 +8,8 @@ import android.widget.GridView;
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.adapters.MainMenuItem;
 import co.gov.inci.evaluon.gui.adapters.listadapters.MainMenuListAdapter;
+import co.gov.inci.evaluon.gui.controllers.activities.account.LogoutActivity;
+import co.gov.inci.evaluon.gui.controllers.activities.settings.SettingsActivity;
 
 public class MainActivity extends ActionBarActivity {
     private String TAG;
@@ -48,13 +51,15 @@ public class MainActivity extends ActionBarActivity {
                 new MainMenuItem(
                         R.string.label_settings,
                         R.string.descriptor_settings,
-                        R.drawable.ic_settings
+                        R.drawable.ic_settings,
+                        new Intent(this, SettingsActivity.class)
                 ),
                 // Logout
                 new MainMenuItem(
                         R.string.label_logout,
                         R.string.descriptor_logout,
-                        R.drawable.ic_turnoff
+                        R.drawable.ic_turnoff,
+                        new Intent(this, LogoutActivity.class)
                 )
         };
         ((GridView)findViewById(R.id.main_menu_grid)).setAdapter(

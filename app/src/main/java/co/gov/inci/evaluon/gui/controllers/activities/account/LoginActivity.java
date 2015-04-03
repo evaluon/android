@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.gui.controllers.activities;
+package co.gov.inci.evaluon.gui.controllers.activities.account;
 
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;
@@ -44,7 +44,6 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_login);
 
         loginButton = (Button) findViewById(R.id.button_authenticate);
@@ -94,8 +93,8 @@ public class LoginActivity extends AccountAuthenticatorActivity
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch(requestCode) {
             case Constants.REQUEST_CODE_REGISTER:
-                Token token = (Token) data.getSerializableExtra("userToken");
                 username = data.getStringExtra("username");
+                Token token = (Token) data.getSerializableExtra("token");
                 success(token, null);
                 break;
         }

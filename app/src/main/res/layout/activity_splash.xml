@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="co.gov.inci.evaluon.gui.controllers.activities.SplashActivity"
+    tools:context="co.gov.inci.evaluon.gui.controllers.activities.account.SplashActivity"
     android:background="@color/blue"
     android:orientation="vertical"
     android:layout_width="match_parent"
