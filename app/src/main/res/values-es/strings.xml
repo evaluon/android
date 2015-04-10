@@ -2,11 +2,20 @@
 <resources>
 
     <!-- Account Login / Register / Update -->
+    <string name="title_activity_login">Iniciar Sesión</string>
+    <string name="title_activity_register">Registro</string>
+    <string name="title_activity_update_profile">Actualizar perfil</string>
+    <string name="title_activity_change_password">Cambiar contraseña</string>
+
     <string name="label_mail">Correo</string>
+    <string name="hint_mail">Ingrese correo</string>
+
     <string name="label_password">Contraseña</string>
-    <string name="label_login">Iniciar Sesión</string>
-    <string name="label_register">Registrarse</string>
-    <string name="label_register_send">Registrarse</string>
+    <string name="label_new_password">Nueva contraseña</string>
+    <string name="hint_password">Ingrese la contraseña</string>
+
+    <string name="label_repeat_password">Repita la contraseña</string>
+    <string name="hint_repeat_password">Ingrese la contraseña nuevamente</string>
 
     <string name="label_id">Número de documento</string>
     <string name="hint_id">Ingrese el número de documento</string>
@@ -31,63 +40,90 @@
     <string name="option_low_vision">Persona con baja visión</string>
     <string name="option_blind_deaf">Persona sordociega</string>
 
-    <string name="create_account">Crear Cuenta</string>
-    <string name="title_activity_update_profile">Actualizar perfil</string>
+    <string name="label_types">Tipo de usuario</string>
+    <string name="descriptor_types">Sección tipo de usuario</string>
+    <string name="option_student">Estudiante</string>
+    <string name="option_employee">Empleado</string>
+    <string name="option_college_applicant">Aspirante universitario</string>
+    <string name="option_job_applicant">Aspirante a empleo</string>
+
+    <string name="label_levels">Nivel de formación</string>
+    <string name="descriptor_levels">Sección nivel de formación</string>
+    <string name="option_elementary">Educación Básica Primaria</string>
+    <string name="option_middle">Educación Básica Secundaria</string>
+    <string name="option_govt_employee">Empleo con el estado</string>
+    <string name="option_college">Universidad</string>
+
+    <string name="option_other">Otro</string>
+
+    <string name="button_register">Registrar</string>
+    <string name="button_update">Actualizar</string>
 
     <!-- Logout activity -->
-    <string name="title_activity_logout">Cerrando sesion</string>
+    <string name="title_activity_logout">Cerrando sesión</string>
 
     <!-- Application Messages -->
     <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
     <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
     <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
+    <string name="message_request_failed">Ha ocurrido un error al conectarse al servidor. Por favor revise su conexión a internet.</string>
     <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
     <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
-    <string name="cant_edit">No se puede editar</string>
+    <string name="message_cant_edit">No se puede editar</string>
+    <string name="message_success_update">Actualización realizada correctamente</string>
+
+    <string name="error_missing_fields">Uno o más datos están incompletos. Por favor, verifique sus datos</string>
+    <string name="error_no_active_groups">No hay grupos disponibles</string>
+    <string name="error_no_active_period">Este grupo no está disponible en este momento</string>
+    <string name="error_no_active_tests">No se encuentra un examen disponible</string>
+    <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
 
     <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>
 
-    <string name="label_evaluation">Evaluación</string>
-    <string name="descriptor_evaluation">Encuentra las pruebas que debes presentar según su asignatura</string>
-
     <string name="label_evaluate">Evalúate</string>
     <string name="descriptor_evaluate">Reta tu conocimiento y prepárate para tus pruebas</string>
-
+    <string name="label_evaluation">Evaluación</string>
+    <string name="descriptor_evaluation">Encuentra las pruebas que debes presentar según su asignatura</string>
     <string name="label_results">Resultados</string>
     <string name="descriptor_results">Revisa el puntaje en poco tiempo y la retroalimentación para mejorar</string>
-
     <string name="label_average">Promedio</string>
     <string name="descriptor_average">Conoce los avances de tus conocimientos</string>
-
     <string name="label_settings">Configuraciones</string>
     <string name="descriptor_settings">Configura tu aplicación</string>
-
     <string name="label_logout">Cerrar sesión</string>
     <string name="descriptor_logout">Cierra esta sesión</string>
 
     <!-- Settings menu -->
     <string name="title_activity_settings">Configuraciones</string>
-
     <string name="label_change_password">Cambiar contraseña</string>
     <string name="descriptor_change_password">Cambia la contraseña</string>
-
     <string name="label_profile_update">Actualizar Perfil</string>
     <string name="descriptor_profile_update">Actualiza tu perfil</string>
-
     <string name="label_help">Ayuda</string>
     <string name="descriptor_help">Entra a ayuda</string>
-
     <string name="label_about" >Acerca de</string>
     <string name="descriptor_about">Entra al acerca de</string>
 
-    <!-- Change password activity  -->
-    <string name="title_activity_change_password">Cambiar contraseña</string>
+    <!-- Help activity -->
+    <string name="title_activity_help">Ayuda</string>
 
-    <string name="label_repeat_password">Repita la contraseña</string>
+    <!-- Institutions activity -->
+    <string name="title_activity_institutions">Instituciones</string>
 
-    <string name="label_new_password">Nueva contraseña</string>
-    <string name="hint_new_password">Ingrese la contraseña</string>
+    <!-- Groups activity -->
+    <string name="title_activity_groups">Grupos</string>
 
+    <!-- Tests activity -->
+    <string name="title_activity_group_tests">Examenes</string>
+
+    <string name="label_begin_test">Empezar prueba</string>
+    <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
+
+    <!-- Test password activity -->
+    <string name="title_activity_test_password">Ingresar a examen</string>
+
+    <!-- Knowledge areas activity -->
+    <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
 
 </resources>

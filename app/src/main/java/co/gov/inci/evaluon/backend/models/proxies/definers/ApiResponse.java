@@ -3,6 +3,8 @@ package co.gov.inci.evaluon.backend.models.proxies.definers;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException;
+
 /*
  * @author Pablo Dorado <pandres95@boolinc.co>
  */
@@ -11,6 +13,7 @@ public class ApiResponse<T> {
 
     @JsonProperty("success") private boolean success;
     @JsonProperty("data") private T data;
+    @JsonProperty("error") private BoolException error;
 
     public ApiResponse() {
         this(true, null);
@@ -29,4 +32,7 @@ public class ApiResponse<T> {
         return data;
     }
 
+    public BoolException getError() {
+        return error;
+    }
 }

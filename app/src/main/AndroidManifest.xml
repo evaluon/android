@@ -11,7 +11,6 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:logo="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Inci" >
 
@@ -20,6 +19,7 @@
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
+
             <meta-data
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
@@ -29,50 +29,95 @@
 
         <!-- Application Activities -->
         <activity
-            android:name=".gui.controllers.activities.account.SplashActivity"
+            android:name=".gui.controllers.account.SplashActivity"
             android:label="@string/title_activity_splash"
             android:noHistory="true"
             android:theme="@style/Theme.Inci.NoActionBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".gui.controllers.activities.account.LoginActivity"
-            android:label="@string/label_login" />
+            android:name=".gui.controllers.account.LoginActivity"
+            android:label="@string/title_activity_login" />
         <activity
-            android:name=".gui.controllers.activities.home.MainActivity"
+            android:name=".gui.controllers.home.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".gui.controllers.activities.settings.SettingsActivity"
+            android:name=".gui.controllers.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".gui.controllers.activities.home.MainActivity" >
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.controllers.activities.home.MainActivity" />
+                android:value=".gui.controllers.home.MainActivity" />
         </activity>
         <activity
-            android:name=".gui.controllers.activities.settings.ChangePasswordActivity"
+            android:name=".gui.controllers.settings.ChangePasswordActivity"
             android:label="@string/title_activity_change_password"
-            android:parentActivityName=".gui.controllers.activities.settings.SettingsActivity" >
+            android:parentActivityName=".gui.controllers.settings.SettingsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="co.gov.inci.evaluon.gui.controllers.activities.settings.SettingsActivity" />
+                android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
         <activity
-            android:name=".gui.controllers.activities.account.LogoutActivity"
+            android:name=".gui.controllers.account.LogoutActivity"
             android:label="@string/title_activity_logout" />
         <activity
-            android:name=".gui.controllers.activities.settings.UpdateUserActivity"
+            android:name=".gui.controllers.settings.UpdateUserActivity"
             android:label="@string/title_activity_update_profile"
-            android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".gui.controllers.activities.settings.SettingsActivity" >
+            android:parentActivityName=".gui.controllers.settings.SettingsActivity"
+            android:windowSoftInputMode="stateHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="co.gov.inci.evaluon.gui.controllers.activities.settings.SettingsActivity" />
+                android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
+        <activity
+            android:name=".gui.controllers.settings.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:parentActivityName=".gui.controllers.settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.evaluations.InstitutionsActivity"
+            android:label="@string/title_activity_institutions"
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.evaluations.GroupsActivity"
+            android:label="@string/title_activity_groups"
+            android:parentActivityName=".gui.controllers.evaluations.InstitutionsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.evaluations.InstitutionsActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.evaluations.GroupTestsActivity"
+            android:label="@string/title_activity_group_tests"
+            android:parentActivityName=".gui.controllers.evaluations.GroupsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.evaluations.GroupsActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.evaluations.TestPasswordActivity"
+            android:label="@string/title_activity_test_password"
+            android:parentActivityName=".gui.controllers.evaluations.GroupTestsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.evaluations.GroupTestsActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.controllers.tests.KnowledgeAreasActivity"
+            android:label="@string/title_activity_knowledge_areas" />
     </application>
 
 </manifest>

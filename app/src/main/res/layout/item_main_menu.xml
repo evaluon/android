@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:gravity="center" />
 
     <!-- For images, like this, we add the contentDescriptor,
     so it's read by TalkBack/another reader -->

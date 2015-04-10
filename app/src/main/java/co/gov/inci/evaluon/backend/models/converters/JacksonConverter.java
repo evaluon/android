@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 
 import retrofit.converter.ConversionException;
 import retrofit.converter.Converter;
@@ -33,7 +34,10 @@ public class JacksonConverter implements Converter {
     public TypedOutput toBody(Object object) {
         try {
             String charset = "UTF-8";
-            return new JsonTypedOutput(objectMapper.writeValueAsString(object).getBytes(charset), charset);
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+            objectMapper.setDateFormat(outputFormat);
+            return new JsonTypedOutput(objectMapper.writeValueAsString(object).getBytes(charset),
+                    charset);
         }
         catch (IOException e) {
             throw new AssertionError(e);

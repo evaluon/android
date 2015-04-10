@@ -2,11 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="co.gov.inci.evaluon.gui.controllers.activities.settings.UpdateUserActivity">
+    tools:context="co.gov.inci.evaluon.gui.controllers.settings.UpdateUserActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,9 +11,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:gravity="center"
             android:orientation="vertical">
 
             <include layout="@layout/include_user_data" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/margin_item"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_label"
+                    android:layout_width="wrap_content"
+                    android:text="@string/label_mail" />
+
+                <EditText
+                    android:id="@+id/text_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_mail"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_register" />
 
         </LinearLayout>
 

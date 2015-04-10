@@ -11,7 +11,7 @@ import android.os.Bundle;
 
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.services.accounts.Constants;
-import co.gov.inci.evaluon.gui.controllers.activities.account.LoginActivity;
+import co.gov.inci.evaluon.gui.controllers.account.LoginActivity;
 
 /**
  * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>

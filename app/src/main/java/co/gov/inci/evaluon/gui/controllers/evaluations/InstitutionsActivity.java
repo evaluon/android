@@ -1,0 +1,54 @@
+package co.gov.inci.evaluon.gui.controllers.evaluations;
+
+import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.widget.GridView;
+
+import co.gov.inci.evaluon.R;
+import co.gov.inci.evaluon.backend.models.adapters.ImageMenuItem;
+import co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException;
+import co.gov.inci.evaluon.backend.models.classes.institutions.Institution;
+import co.gov.inci.evaluon.backend.models.converters.BoolExceptionConverter;
+import co.gov.inci.evaluon.backend.models.proxies.InstitutionsProxy;
+import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
+import co.gov.inci.evaluon.backend.services.gui.ToastService;
+import co.gov.inci.evaluon.gui.adapters.listadapters.ImageMenuListAdapter;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+
+public class InstitutionsActivity extends ActionBarActivity implements Callback<ApiResponse<Institution[]>> {
+
+    @Override protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_institutions);
+        new InstitutionsProxy(this).list(this);
+    }
+
+    @Override public void success(ApiResponse<Institution[]> apiResponse, Response response) {
+        Institution[] institutions = apiResponse.getData();
+        ImageMenuItem[] items = new ImageMenuItem[institutions.length];
+
+        for(int i = 0; i < institutions.length; i++){
+            Intent intent = new Intent(this, GroupsActivity.class);
+            intent.putExtra("id", institutions[i].getId());
+
+            items[i] = new ImageMenuItem(
+                    institutions[i].getName(),
+                    institutions[i].getImage(),
+                    intent
+            );
+        }
+
+        ((GridView)findViewById(R.id.institutions_menu_grid)).setAdapter(
+                new ImageMenuListAdapter(this, items)
+        );
+    }
+
+    @Override public void failure(RetrofitError error) {
+        BoolException exception = (BoolException)BoolExceptionConverter.parse(error);
+        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        finish();
+    }
+}

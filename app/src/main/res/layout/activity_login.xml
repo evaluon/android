@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
 
-    <include layout="@layout/include_form_login" />
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/text_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/text_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_password"
+        android:contentDescription="@string/label_password"
+        android:inputType="textPassword" />
 
     <Button
-
         android:id="@+id/button_authenticate"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:layout_margin="10dp"
-        android:layout_marginBottom="15dp"
 
-        android:text="@string/label_login"
+        android:text="@string/title_activity_login"
         android:gravity="center"/>
 
     <Button
-
         android:id="@+id/button_register"
 
         android:layout_width="match_parent"
@@ -30,7 +45,7 @@
 
         android:layout_margin="10dp"
 
-        android:text="@string/label_register"
+        android:text="@string/title_activity_register"
         android:gravity="center"/>
 
 </LinearLayout>

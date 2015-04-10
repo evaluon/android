@@ -3,7 +3,7 @@ package co.gov.inci.evaluon.backend.models.proxies;
 import android.content.Context;
 
 import co.gov.inci.evaluon.backend.models.apisets.Authentication;
-import co.gov.inci.evaluon.backend.models.classes.Token;
+import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiProxy;
 import retrofit.Callback;
 

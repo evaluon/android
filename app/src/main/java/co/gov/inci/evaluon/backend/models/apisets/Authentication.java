@@ -1,6 +1,6 @@
 package co.gov.inci.evaluon.backend.models.apisets;
 
-import co.gov.inci.evaluon.backend.models.classes.Token;
+import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
 import retrofit.Callback;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;

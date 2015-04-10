@@ -1,6 +1,6 @@
 package co.gov.inci.evaluon.backend.services.accounts.helpers;
 
-import co.gov.inci.evaluon.backend.models.classes.Token;
+import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
 
 /**
  * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>

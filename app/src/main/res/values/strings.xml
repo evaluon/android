@@ -4,6 +4,8 @@
 
     <!-- API -->
     <string name="endpointUrl" translatable="false">http://evaluon.boolinc.co</string>
+    <string name="cdnUrl" translatable="false">http://cdn.boolinc.co/evaluon</string>
+    <string name="placeHoldItUrl" translatable="false">http://placehold.it/180/FFFFFF/00427a&amp;text=</string>
     <string name="client_id" translatable="false">administrator</string>
     <string name="client_secret" translatable="false">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>
 
@@ -11,11 +13,20 @@
     <string name="title_activity_splash" translatable="false">Evaluon</string>
 
     <!-- Account Login / Register / Update -->
+    <string name="title_activity_login">Iniciar Sesión</string>
+    <string name="title_activity_register">Registro</string>
+    <string name="title_activity_update_profile">Actualizar perfil</string>
+    <string name="title_activity_change_password">Cambiar contraseña</string>
+
     <string name="label_mail">Correo</string>
+    <string name="hint_mail">Ingrese correo</string>
+
     <string name="label_password">Contraseña</string>
-    <string name="label_login">Iniciar Sesión</string>
-    <string name="label_register">Registrarse</string>
-    <string name="label_register_send">Registrar</string>
+    <string name="label_new_password">Nueva contraseña</string>
+    <string name="hint_password">Ingrese la contraseña</string>
+
+    <string name="label_repeat_password">Repita la contraseña</string>
+    <string name="hint_repeat_password">Ingrese la contraseña nuevamente</string>
 
     <string name="label_id">Número de documento</string>
     <string name="hint_id">Ingrese el número de documento</string>
@@ -40,8 +51,24 @@
     <string name="option_low_vision">Persona con baja visión</string>
     <string name="option_blind_deaf">Persona sordociega</string>
 
-    <string name="create_account">Crear Cuenta</string>
-    <string name="title_activity_update_profile">Actualizar perfil</string>
+    <string name="label_types">Tipo de usuario</string>
+    <string name="descriptor_types">Sección tipo de usuario</string>
+    <string name="option_student">Estudiante</string>
+    <string name="option_employee">Empleado</string>
+    <string name="option_college_applicant">Aspirante universitario</string>
+    <string name="option_job_applicant">Aspirante a empleo</string>
+
+    <string name="label_levels">Nivel de formación</string>
+    <string name="descriptor_levels">Sección nivel de formación</string>
+    <string name="option_elementary">Educación Básica Primaria</string>
+    <string name="option_middle">Educación Básica Secundaria</string>
+    <string name="option_govt_employee">Empleo con el estado</string>
+    <string name="option_college">Universidad</string>
+
+    <string name="option_other">Otro</string>
+
+    <string name="button_register">Registrar</string>
+    <string name="button_update">Actualizar</string>
 
     <!-- Logout activity -->
     <string name="title_activity_logout">Cerrando sesión</string>
@@ -50,9 +77,17 @@
     <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
     <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
     <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
+    <string name="message_request_failed">Ha ocurrido un error al conectarse al servidor. Por favor revise su conexión a internet.</string>
     <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
     <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
-    <string name="cant_edit">No se puede editar</string>
+    <string name="message_cant_edit">No se puede editar</string>
+    <string name="message_success_update">Actualización realizada correctamente</string>
+
+    <string name="error_missing_fields">Uno o más datos están incompletos. Por favor, verifique sus datos</string>
+    <string name="error_no_active_groups">No hay grupos disponibles</string>
+    <string name="error_no_active_period">Este grupo no está disponible en este momento</string>
+    <string name="error_no_active_tests">No se encuentra un examen disponible</string>
+    <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
 
     <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>
@@ -81,10 +116,24 @@
     <string name="label_about" >Acerca de</string>
     <string name="descriptor_about">Entra al acerca de</string>
 
-    <!-- Change password activity -->
-    <string name="title_activity_change_password">Cambiar contraseña</string>
-    <string name="label_new_password">Nueva contraseña</string>
-    <string name="hint_new_password">Ingrese la contraseña</string>
-    <string name="label_repeat_password">Repita la contraseña</string>
+    <!-- Help activity -->
+    <string name="title_activity_help">Ayuda</string>
+
+    <!-- Institutions activity -->
+    <string name="title_activity_institutions">Instituciones</string>
+
+    <!-- Groups activity -->
+    <string name="title_activity_groups">Grupos</string>
+
+    <!-- Tests activity -->
+    <string name="title_activity_group_tests">Examenes</string>
+    <string name="label_begin_test">Empezar prueba</string>
+    <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
+
+    <!-- Test password activity -->
+    <string name="title_activity_test_password">Ingresar a examen</string>
+
+    <!-- Knowledge areas activity -->
+    <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
 
 </resources>
