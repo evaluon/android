@@ -89,6 +89,22 @@
     <string name="error_no_active_tests">No se encuentra un examen disponible</string>
     <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
 
+    <string name="error_is_evaluee">Imposible realizar acción. Es un estudiante</string>
+    <string name="error_invalid_permissions">No tienes permiso para acceder a estos recursos</string>
+    <string name="error_not_an_evaluee">Imposible realizar acción. No es un docente</string>
+    <string name="error_not_evaluees">Alguno de los usuarios no es un estudiante</string>
+    <string name="error_test_unopened">Éste test aún no está abierto</string>
+    <string name="error_unabled_institution">Imposible realizar acción sobre esta institución</string>
+    <string name="error_insuficient_privileges">No tienes permiso para acceder a estos recursos</string>
+    <string name="error_invalid_grant">Usuario y contraseña no coinciden</string>
+    <string name="error_access_denied">Usuario Bloqueado</string>
+    <string name="error_already_opened_test">El test que intenta abrir ya ha sido abierto</string>
+    <string name="error_existing_user">El usuario ya existe</string>
+    <string name="error_test_unavailable">La prueba seleccionada no está disponible</string>
+    <string name="error_client_not_found">Cliente de aplicación no encontrado</string>
+    <string name="error_no_questions_available">No hay preguntas disponibles</string>
+
+
     <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>
 
