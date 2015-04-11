@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.gui.controllers.evaluations;
+package co.gov.inci.evaluon.gui.controllers.tests.groups;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;

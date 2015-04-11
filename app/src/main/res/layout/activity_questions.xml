@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_questions"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/label_questions_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/item_padding"
+                android:focusable="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/label_questions" />
+
+            <co.gov.inci.evaluon.backend.services.gui.DynamicSizedListView
+                android:id="@+id/list_view_questions"
+                android:layout_margin="@dimen/item_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/item_padding"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="0.95"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_hide_questions" />
+
+                <LinearLayout
+                    android:layout_weight=".05"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ToggleButton
+                    android:id="@+id/toggle_hide_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/item_padding"
+                android:text="@string/label_send" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -9,8 +9,9 @@ import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.adapters.ResourcesMenuItem;
 import co.gov.inci.evaluon.gui.adapters.listadapters.ImageMenuListAdapter;
 import co.gov.inci.evaluon.gui.controllers.account.LogoutActivity;
-import co.gov.inci.evaluon.gui.controllers.evaluations.InstitutionsActivity;
+import co.gov.inci.evaluon.gui.controllers.tests.groups.InstitutionsActivity;
 import co.gov.inci.evaluon.gui.controllers.settings.SettingsActivity;
+import co.gov.inci.evaluon.gui.controllers.tests.list.SelfTestListActivity;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -28,7 +29,8 @@ public class MainActivity extends ActionBarActivity {
                         new ResourcesMenuItem(
                                 R.string.label_evaluate,
                                 R.string.descriptor_evaluate,
-                                R.drawable.ic_evaluate
+                                R.drawable.ic_evaluate,
+                                new Intent(this, SelfTestListActivity.class)
                         ),
                         new ResourcesMenuItem(
                                 R.string.label_results,

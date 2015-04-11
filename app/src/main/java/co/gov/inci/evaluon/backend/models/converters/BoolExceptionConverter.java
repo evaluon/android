@@ -11,7 +11,7 @@ public class BoolExceptionConverter {
     public static Exception parse(RetrofitError error){
         return (error.getBody() != null && ((ApiResponse<Void>)error.getBody()).getError() != null ?
                 ((ApiResponse<Void>)error.getBody()).getError() :
-                error
+                null
         );
     }
 

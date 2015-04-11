@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="co.gov.inci.evaluon.gui.controllers.evaluations.InstitutionsActivity"
+    tools:context="co.gov.inci.evaluon.gui.controllers.tests.groups.InstitutionsActivity"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"

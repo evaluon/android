@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.gui.controllers.evaluations;
+package co.gov.inci.evaluon.gui.controllers.tests.groups;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +15,7 @@ import co.gov.inci.evaluon.backend.models.proxies.InstitutionsProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
 import co.gov.inci.evaluon.gui.adapters.listadapters.ImageMenuListAdapter;
+import co.gov.inci.evaluon.gui.controllers.tests.list.GroupTestListActivity;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -34,7 +35,7 @@ public class GroupsActivity extends ActionBarActivity implements Callback<ApiRes
         ImageMenuItem[] items = new ImageMenuItem[groups.length];
 
         for(int i = 0; i < groups.length; i++){
-            Intent intent = new Intent(this, GroupTestsActivity.class);
+            Intent intent = new Intent(this, GroupTestListActivity.class);
             intent.putExtra("id", groups[i].getId());
 
             items[i] = new ImageMenuItem(

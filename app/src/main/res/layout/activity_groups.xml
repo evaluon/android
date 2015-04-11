@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="co.gov.inci.evaluon.gui.controllers.evaluations.GroupsActivity"
+    tools:context="co.gov.inci.evaluon.gui.controllers.tests.groups.GroupsActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent" >
 

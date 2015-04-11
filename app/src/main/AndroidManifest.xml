@@ -62,9 +62,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
+
         <activity
             android:name=".gui.controllers.account.LogoutActivity"
             android:label="@string/title_activity_logout" />
+
         <activity
             android:name=".gui.controllers.settings.UpdateUserActivity"
             android:label="@string/title_activity_update_profile"
@@ -82,8 +84,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
+
         <activity
-            android:name=".gui.controllers.evaluations.InstitutionsActivity"
+            android:name=".gui.controllers.tests.groups.InstitutionsActivity"
             android:label="@string/title_activity_institutions"
             android:parentActivityName=".gui.controllers.home.MainActivity" >
             <meta-data
@@ -91,33 +94,56 @@
                 android:value=".gui.controllers.home.MainActivity" />
         </activity>
         <activity
-            android:name=".gui.controllers.evaluations.GroupsActivity"
+            android:name=".gui.controllers.tests.groups.GroupsActivity"
             android:label="@string/title_activity_groups"
-            android:parentActivityName=".gui.controllers.evaluations.InstitutionsActivity" >
+            android:parentActivityName=".gui.controllers.tests.groups.InstitutionsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.controllers.evaluations.InstitutionsActivity" />
-        </activity>
-        <activity
-            android:name=".gui.controllers.evaluations.GroupTestsActivity"
-            android:label="@string/title_activity_group_tests"
-            android:parentActivityName=".gui.controllers.evaluations.GroupsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.controllers.evaluations.GroupsActivity" />
-        </activity>
-        <activity
-            android:name=".gui.controllers.evaluations.TestPasswordActivity"
-            android:label="@string/title_activity_test_password"
-            android:parentActivityName=".gui.controllers.evaluations.GroupTestsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.controllers.evaluations.GroupTestsActivity" />
+                android:value=".gui.controllers.tests.groups.InstitutionsActivity" />
         </activity>
 
         <activity
-            android:name=".gui.controllers.tests.KnowledgeAreasActivity"
-            android:label="@string/title_activity_knowledge_areas" />
+            android:name=".gui.controllers.tests.list.GroupTestListActivity"
+            android:label="@string/title_activity_test_list"
+            android:parentActivityName=".gui.controllers.tests.groups.GroupsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.tests.groups.GroupsActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.tests.list.SelfTestListActivity"
+            android:label="@string/title_activity_test_list"
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.home.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.controllers.tests.groups.TestPasswordActivity"
+            android:label="@string/title_activity_test_password"
+            android:parentActivityName=".gui.controllers.tests.list.TestListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.tests.list.TestListActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.controllers.tests.exams.KnowledgeAreasActivity"
+            android:label="@string/title_activity_knowledge_areas"
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".gui.controllers.tests.list.TestListActivity" />
+    </activity>
+        <activity
+            android:name=".gui.controllers.tests.exams.QuestionsActivity"
+            android:label="@string/title_activity_pre_questions"
+            android:parentActivityName=".gui.controllers.tests.exams.KnowledgeAreasActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.tests.list.TestListActivity" />
+        </activity>
     </application>
 
 </manifest>

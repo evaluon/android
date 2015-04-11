@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.backend.models.interfaces;
+package co.gov.inci.evaluon.backend.models.classes.questions;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -8,24 +8,36 @@ import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public abstract class Answer implements Serializable {
+public class Answer implements Serializable {
 
     @JsonProperty("test_id") private Integer testId;
     @JsonProperty("question_id") private Integer questionId;
     @JsonProperty("answer_id") private Integer answerId;
+    @JsonProperty("text") private String text;
 
     public Answer(){
-        this(null, null, null);
+        this(null, null);
     }
 
     public Answer(Integer testId, Integer questionId){
-        this(testId, questionId, null);
+        this.testId = testId;
+        this.questionId = questionId;
+        this.text = null;
+        this.answerId = null;
+    }
+
+    public Answer(Integer testId, Integer questionId, String text) {
+        this.testId = testId;
+        this.questionId = questionId;
+        this.answerId = null;
+        this.text = text;
     }
 
     public Answer(Integer testId, Integer questionId, Integer answerId) {
         this.testId = testId;
         this.questionId = questionId;
         this.answerId = answerId;
+        this.text = null;
     }
 
     public Integer getTestId() {
@@ -38,5 +50,9 @@ public abstract class Answer implements Serializable {
 
     public Integer getAnswerId() {
         return answerId;
+    }
+
+    public String getText() {
+        return text;
     }
 }

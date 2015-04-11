@@ -126,7 +126,7 @@
     <string name="title_activity_groups">Grupos</string>
 
     <!-- Tests activity -->
-    <string name="title_activity_group_tests">Examenes</string>
+    <string name="title_activity_test_list">Examenes</string>
     <string name="label_begin_test">Empezar prueba</string>
     <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
 
@@ -135,5 +135,14 @@
 
     <!-- Knowledge areas activity -->
     <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
+
+    <!-- Questions activity -->
+    <string name="title_activity_pre_questions">Preguntas</string>
+    <string name="title_activity_questions">Examen de %s</string>
+
+    <string name="hint_open_question">Ingrese la respuesta</string>
+    <string name="label_hide_questions">Preguntas no contestadas</string>
+    <string name="label_send">Enviar</string>
+    <string name="label_questions">Preguntas</string>
 
 </resources>

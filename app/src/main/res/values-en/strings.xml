@@ -124,7 +124,7 @@
     <string name="title_activity_groups">Groups</string>
 
     <!-- Tests activity -->
-    <string name="title_activity_group_tests">Tests</string>
+    <string name="title_activity_test_list">Tests</string>
 
     <string name="label_begin_test">Begin test</string>
     <string name="descriptor_begin_test">Begin test. Button</string>

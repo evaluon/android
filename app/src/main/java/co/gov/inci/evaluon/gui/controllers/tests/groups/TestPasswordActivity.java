@@ -1,4 +1,4 @@
-package co.gov.inci.evaluon.gui.controllers.evaluations;
+package co.gov.inci.evaluon.gui.controllers.tests.groups;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,13 +9,12 @@ import android.widget.EditText;
 
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException;
-import co.gov.inci.evaluon.backend.models.classes.test.KnowledgeArea;
 import co.gov.inci.evaluon.backend.models.classes.test.Test;
 import co.gov.inci.evaluon.backend.models.converters.BoolExceptionConverter;
 import co.gov.inci.evaluon.backend.models.proxies.TestsProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
-import co.gov.inci.evaluon.gui.controllers.tests.KnowledgeAreasActivity;
+import co.gov.inci.evaluon.gui.controllers.tests.exams.KnowledgeAreasActivity;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;

@@ -1,6 +1,7 @@
 package co.gov.inci.evaluon.backend.models.adapters;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -28,6 +29,9 @@ public abstract class MenuItem implements View.OnClickListener {
     public abstract void drawImage(ImageView iv);
 
     @Override public void onClick(View v) {
-        if(intent != null) context.startActivity(intent);
+        if(intent != null){
+            context.startActivity(intent);
+            if(intent.getBooleanExtra("finish_parent", false)) ((Activity)context).finish();
+        }
     }
 }
