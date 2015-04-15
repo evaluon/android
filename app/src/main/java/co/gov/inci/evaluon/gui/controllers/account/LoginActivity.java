@@ -5,6 +5,7 @@ import android.accounts.AccountAuthenticatorActivity;
 import android.accounts.AccountManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,19 +25,12 @@ import retrofit.client.Response;
 /**
  * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>
  */
-public class LoginActivity extends AccountAuthenticatorActivity
+public class LoginActivity extends ActionBarActivity
         implements View.OnClickListener, Callback<Token> {
     private String TAG = "LoginActivity";
 
-    public static final String PARAM_AUTHTOKEN_TYPE = "auth.token";
-    public static final String EXTRA_REQUEST_CODE = "req.code";
-
-    public static final int REQ_CODE_CREATE = 1;
-    public static final int REQ_CODE_UPDATE = 2;
-
     private String username;
     private String password;
-    private String accountType;
 
     private Button loginButton;
     private Button registerButton;
@@ -67,9 +61,9 @@ public class LoginActivity extends AccountAuthenticatorActivity
                 login();
                 break;
             case R.id.button_register:
-                /*Intent i = new Intent(this, RegisterActivity.class);
-                startActivityForResult(i, Constants.REQUEST_CODE_REGISTER);
-                break;*/
+                Intent i = new Intent(this, RegisterActivity.class);
+                startActivityForResult(i, 0);
+                break;
         }
     }
 
@@ -91,36 +85,19 @@ public class LoginActivity extends AccountAuthenticatorActivity
     }
 
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch(requestCode) {
-            case Constants.REQUEST_CODE_REGISTER:
-                username = data.getStringExtra("username");
-                Token token = (Token) data.getSerializableExtra("token");
-                success(token, null);
-                break;
+        if(resultCode == RESULT_OK) {
+            username = data.getStringExtra("username");
+            password = data.getStringExtra("password");
+            Token token = (Token) data.getSerializableExtra("token");
+            success(token, null);
         }
     }
 
     @Override public void success(Token token, Response response) {
 
-        accountType = this.getIntent().getStringExtra(PARAM_AUTHTOKEN_TYPE);
-        if (accountType == null) {
-            accountType = Constants.ACCOUNT_TYPE;
-        }
-
-        AccountManager accMgr = AccountManager.get(this);
-
-        // This is the magic that adds the account to the Android Account Manager
-        final Account account = new Account(username, accountType);
-        accMgr.addAccountExplicitly(account, token.getAccessToken(), null);
-
-        // Now we tell our caller, could be the Android Account Manager or even our own application
-        // that the process was successful
-        final Intent intent = new Intent();
-        intent.putExtra(AccountManager.KEY_ACCOUNT_NAME, username);
-        intent.putExtra(AccountManager.KEY_ACCOUNT_TYPE, accountType);
-        intent.putExtra(AccountManager.KEY_AUTHTOKEN, accountType);
-        setAccountAuthenticatorResult(intent.getExtras());
-
+        Intent intent = new Intent();
+        intent.putExtra("token", token);
+        intent.putExtra("username", username);
         setResult(RESULT_OK, intent);
         finish();
 
@@ -128,7 +105,7 @@ public class LoginActivity extends AccountAuthenticatorActivity
 
     @Override public void failure(RetrofitError error) {
         loginButton.setEnabled(true);
-        ToastService.byResource(this, R.string.message_register_failed);
+        ToastService.error(this, error);
     }
 
     @Override public void onBackPressed() {

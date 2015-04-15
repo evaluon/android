@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Test results activity -->
+    <string name="title_activity_test_results">Results</string>
+    <string name="test_results_label" formatted="false">%d right questions out of %d</string>
+
+    <!-- Indicators activity -->
+    <string name="title_activity_indicator">Learning Average</string>
+
+    <string name="label_since">Since:</string>
+    <string name="label_get_grade">Since you\'ve completed your tests, you\'ve reached level %s</string>
+
+    <string name="label_right_questions">Right questions:</string>
+    <string name="label_average_indicator">Average:</string>
+    <string name="label_remaining_questions">Remaining questions to next level:</string>
+
+</resources>

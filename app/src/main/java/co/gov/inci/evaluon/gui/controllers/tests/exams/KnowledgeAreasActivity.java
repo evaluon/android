@@ -15,6 +15,7 @@ import co.gov.inci.evaluon.backend.models.proxies.TestsProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
 import co.gov.inci.evaluon.gui.adapters.listadapters.ImageMenuListAdapter;
+import co.gov.inci.evaluon.gui.controllers.home.MainActivity;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -37,26 +38,46 @@ public class KnowledgeAreasActivity extends ActionBarActivity
 
     @Override public void success(ApiResponse<KnowledgeArea[]> apiResponse, Response response) {
         KnowledgeArea[] knowledgeAreas = apiResponse.getData();
-        MenuItem[] items = new MenuItem[knowledgeAreas.length];
 
-        for(int i = 0; i < knowledgeAreas.length; i++){
-            Intent intent = new Intent(this, QuestionsActivity.class);
-            intent.putExtra("test", testId);
-            intent.putExtra("area", knowledgeAreas[i].getId());
+        if(knowledgeAreas.length > 0){
+            MenuItem[] items = new MenuItem[knowledgeAreas.length];
 
-            items[i] = new ImageMenuItem(
-                    knowledgeAreas[i].getId(), knowledgeAreas[i].getImage(), intent
+            for(int i = 0; i < knowledgeAreas.length; i++){
+                Intent intent = new Intent(this, QuestionsActivity.class);
+                intent.putExtra("test", testId);
+                intent.putExtra("area", knowledgeAreas[i].getId());
+
+                items[i] = new ImageMenuItem(
+                        knowledgeAreas[i].getId(), knowledgeAreas[i].getImage(), intent
+                );
+            }
+
+            ((GridView)findViewById(R.id.knowledge_areas_menu_grid)).setAdapter(
+                    new ImageMenuListAdapter(this, items)
             );
-        }
 
-        ((GridView)findViewById(R.id.knowledge_areas_menu_grid)).setAdapter(
-                new ImageMenuListAdapter(this, items)
-        );
+        } else {
+            new TestsProxy(this).closeTest(testId, testCloseCallback);
+        }
     }
 
     @Override public void failure(RetrofitError error) {
-        BoolException exception = (BoolException) BoolExceptionConverter.parse(error);
-        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        ToastService.error(this, error);
         finish();
     }
+
+    private Callback<ApiResponse<Void>> testCloseCallback = new Callback<ApiResponse<Void>>() {
+        @Override public void success(ApiResponse<Void> voidApiResponse, Response response) {
+            ToastService.byResource(KnowledgeAreasActivity.this, R.string.message_test_finished);
+            Intent intent = new Intent(KnowledgeAreasActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        }
+
+        @Override public void failure(RetrofitError error) {
+            ToastService.error(KnowledgeAreasActivity.this, error);
+        }
+    };
+
 }

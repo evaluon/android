@@ -11,6 +11,7 @@ public class ClientToken extends Token {
 
     private ClientToken(Token token){
         super(token);
+        instance = this;
     }
 
     public static Token getToken(){

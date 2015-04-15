@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Test results activity -->
+    <string name="title_activity_test_results">Resultados</string>
+    <string name="test_results_label" formatted="false">%d preguntas acertadas de %d</string>
+
+    <!-- Indicators activity -->
+    <string name="title_activity_indicator">Promedio de Aprendizaje</string>
+
+    <string name="label_since">Desde:</string>
+    <string name="label_get_grade">Al completar tus evaluaciones has conseguido el grado %s</string>
+
+    <string name="label_right_questions">Preguntas acertadas:</string>
+    <string name="label_average_indicator">Promedio:</string>
+    <string name="label_remaining_questions">Preguntas para el próximo grado:</string>
+
+</resources>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name" translatable="false">Evaluon</string>
+
+    <string name="descriptor_button">Botón</string>
+
+    <!-- Splash Activity -->
+    <string name="title_activity_splash" translatable="false">Evaluon</string>
 
     <!-- API -->
     <string name="endpointUrl" translatable="false">http://evaluon.boolinc.co</string>
@@ -8,157 +14,5 @@
     <string name="placeHoldItUrl" translatable="false">http://placehold.it/180/FFFFFF/00427a&amp;text=</string>
     <string name="client_id" translatable="false">administrator</string>
     <string name="client_secret" translatable="false">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>
-
-    <!-- Splash Activity -->
-    <string name="title_activity_splash" translatable="false">Evaluon</string>
-
-    <!-- Account Login / Register / Update -->
-    <string name="title_activity_login">Iniciar Sesión</string>
-    <string name="title_activity_register">Registro</string>
-    <string name="title_activity_update_profile">Actualizar perfil</string>
-    <string name="title_activity_change_password">Cambiar contraseña</string>
-
-    <string name="label_mail">Correo</string>
-    <string name="hint_mail">Ingrese correo</string>
-
-    <string name="label_password">Contraseña</string>
-    <string name="label_new_password">Nueva contraseña</string>
-    <string name="hint_password">Ingrese la contraseña</string>
-
-    <string name="label_repeat_password">Repita la contraseña</string>
-    <string name="hint_repeat_password">Ingrese la contraseña nuevamente</string>
-
-    <string name="label_id">Número de documento</string>
-    <string name="hint_id">Ingrese el número de documento</string>
-
-    <string name="label_name">Nombres</string>
-    <string name="hint_name">Ingrese los nombres</string>
-
-    <string name="label_surname">Apellidos</string>
-    <string name="hint_surname">Ingrese los apellidos</string>
-
-    <string name="label_birthday">Fecha de nacimiento</string>
-    <string name="hint_birthday">Ingrese la fecha de nacimiento</string>
-
-    <string name="label_gender">Género</string>
-    <string name="option_male">Hombre</string>
-    <string name="option_female">Mujer</string>
-
-    <string name="label_disabilities">Condición visual</string>
-    <string name="descriptor_disabilities">Sección condición visual</string>
-    <string name="option_no_disability">Sin discapacidad</string>
-    <string name="option_blind">Persona ciega</string>
-    <string name="option_low_vision">Persona con baja visión</string>
-    <string name="option_blind_deaf">Persona sordociega</string>
-
-    <string name="label_types">Tipo de usuario</string>
-    <string name="descriptor_types">Sección tipo de usuario</string>
-    <string name="option_student">Estudiante</string>
-    <string name="option_employee">Empleado</string>
-    <string name="option_college_applicant">Aspirante universitario</string>
-    <string name="option_job_applicant">Aspirante a empleo</string>
-
-    <string name="label_levels">Nivel de formación</string>
-    <string name="descriptor_levels">Sección nivel de formación</string>
-    <string name="option_elementary">Educación Básica Primaria</string>
-    <string name="option_middle">Educación Básica Secundaria</string>
-    <string name="option_govt_employee">Empleo con el estado</string>
-    <string name="option_college">Universidad</string>
-
-    <string name="option_other">Otro</string>
-
-    <string name="button_register">Registrar</string>
-    <string name="button_update">Actualizar</string>
-
-    <!-- Logout activity -->
-    <string name="title_activity_logout">Cerrando sesión</string>
-
-    <!-- Application Messages -->
-    <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
-    <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
-    <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
-    <string name="message_request_failed">Ha ocurrido un error al conectarse al servidor. Por favor revise su conexión a internet.</string>
-    <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
-    <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
-    <string name="message_cant_edit">No se puede editar</string>
-    <string name="message_success_update">Actualización realizada correctamente</string>
-
-    <string name="error_missing_fields">Uno o más datos están incompletos. Por favor, verifique sus datos</string>
-    <string name="error_no_active_groups">No hay grupos disponibles</string>
-    <string name="error_no_active_period">Este grupo no está disponible en este momento</string>
-    <string name="error_no_active_tests">No se encuentra un examen disponible</string>
-    <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
-
-    <string name="error_is_evaluee">Imposible realizar acción. Es un estudiante</string>
-    <string name="error_invalid_permissions">No tienes permiso para acceder a estos recursos</string>
-    <string name="error_not_an_evaluee">Imposible realizar acción. No es un docente</string>
-    <string name="error_not_evaluees">Alguno de los usuarios no es un estudiante</string>
-    <string name="error_test_unopened">Éste test aún no está abierto</string>
-    <string name="error_unabled_institution">Imposible realizar acción sobre esta institución</string>
-    <string name="error_insuficient_privileges">No tienes permiso para acceder a estos recursos</string>
-    <string name="error_invalid_grant">Usuario y contraseña no coinciden</string>
-    <string name="error_access_denied">Usuario Bloqueado</string>
-    <string name="error_already_opened_test">El test que intenta abrir ya ha sido abierto</string>
-    <string name="error_existing_user">El usuario ya existe</string>
-    <string name="error_test_unavailable">La prueba seleccionada no está disponible</string>
-    <string name="error_client_not_found">Cliente de aplicación no encontrado</string>
-    <string name="error_no_questions_available">No hay preguntas disponibles</string>
-
-
-    <!-- Main menu -->
-    <string name="title_activity_main">Menú Principal</string>
-
-    <string name="label_evaluate">Evalúate</string>
-    <string name="descriptor_evaluate">Reta tu conocimiento y prepárate para tus pruebas</string>
-    <string name="label_evaluation">Evaluación</string>
-    <string name="descriptor_evaluation">Encuentra las pruebas que debes presentar según su asignatura</string>
-    <string name="label_results">Resultados</string>
-    <string name="descriptor_results">Revisa el puntaje en poco tiempo y la retroalimentación para mejorar</string>
-    <string name="label_average">Promedio</string>
-    <string name="descriptor_average">Conoce los avances de tus conocimientos</string>
-    <string name="label_settings">Configuraciones</string>
-    <string name="descriptor_settings">Configura tu aplicación</string>
-    <string name="label_logout">Cerrar sesión</string>
-    <string name="descriptor_logout">Cierra esta sesión</string>
-
-    <!-- Settings menu -->
-    <string name="title_activity_settings">Configuraciones</string>
-    <string name="label_change_password">Cambiar contraseña</string>
-    <string name="descriptor_change_password">Cambia la contraseña</string>
-    <string name="label_profile_update">Actualizar Perfil</string>
-    <string name="descriptor_profile_update">Actualiza tu perfil</string>
-    <string name="label_help">Ayuda</string>
-    <string name="descriptor_help">Entra a ayuda</string>
-    <string name="label_about" >Acerca de</string>
-    <string name="descriptor_about">Entra al acerca de</string>
-
-    <!-- Help activity -->
-    <string name="title_activity_help">Ayuda</string>
-
-    <!-- Institutions activity -->
-    <string name="title_activity_institutions">Instituciones</string>
-
-    <!-- Groups activity -->
-    <string name="title_activity_groups">Grupos</string>
-
-    <!-- Tests activity -->
-    <string name="title_activity_test_list">Examenes</string>
-    <string name="label_begin_test">Empezar prueba</string>
-    <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
-
-    <!-- Test password activity -->
-    <string name="title_activity_test_password">Ingresar a examen</string>
-
-    <!-- Knowledge areas activity -->
-    <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
-
-    <!-- Questions activity -->
-    <string name="title_activity_pre_questions">Preguntas</string>
-    <string name="title_activity_questions">Examen de %s</string>
-
-    <string name="hint_open_question">Ingrese la respuesta</string>
-    <string name="label_hide_questions">Preguntas no contestadas</string>
-    <string name="label_send">Enviar</string>
-    <string name="label_questions">Preguntas</string>
 
 </resources>

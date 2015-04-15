@@ -59,25 +59,6 @@
     <string name="button_register">Registrar</string>
     <string name="button_update">Actualizar</string>
 
-    <!-- Logout activity -->
-    <string name="title_activity_logout">Cerrando sesión</string>
-
-    <!-- Application Messages -->
-    <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
-    <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
-    <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
-    <string name="message_request_failed">Ha ocurrido un error al conectarse al servidor. Por favor revise su conexión a internet.</string>
-    <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
-    <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
-    <string name="message_cant_edit">No se puede editar</string>
-    <string name="message_success_update">Actualización realizada correctamente</string>
-
-    <string name="error_missing_fields">Uno o más datos están incompletos. Por favor, verifique sus datos</string>
-    <string name="error_no_active_groups">No hay grupos disponibles</string>
-    <string name="error_no_active_period">Este grupo no está disponible en este momento</string>
-    <string name="error_no_active_tests">No se encuentra un examen disponible</string>
-    <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
-
     <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>
 
@@ -94,36 +75,7 @@
     <string name="label_logout">Cerrar sesión</string>
     <string name="descriptor_logout">Cierra esta sesión</string>
 
-    <!-- Settings menu -->
-    <string name="title_activity_settings">Configuraciones</string>
-    <string name="label_change_password">Cambiar contraseña</string>
-    <string name="descriptor_change_password">Cambia la contraseña</string>
-    <string name="label_profile_update">Actualizar Perfil</string>
-    <string name="descriptor_profile_update">Actualiza tu perfil</string>
-    <string name="label_help">Ayuda</string>
-    <string name="descriptor_help">Entra a ayuda</string>
-    <string name="label_about" >Acerca de</string>
-    <string name="descriptor_about">Entra al acerca de</string>
-
-    <!-- Help activity -->
-    <string name="title_activity_help">Ayuda</string>
-
-    <!-- Institutions activity -->
-    <string name="title_activity_institutions">Instituciones</string>
-
-    <!-- Groups activity -->
-    <string name="title_activity_groups">Grupos</string>
-
-    <!-- Tests activity -->
-    <string name="title_activity_test_list">Examenes</string>
-
-    <string name="label_begin_test">Empezar prueba</string>
-    <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
-
-    <!-- Test password activity -->
-    <string name="title_activity_test_password">Ingresar a examen</string>
-
-    <!-- Knowledge areas activity -->
-    <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
+    <!-- Logout activity -->
+    <string name="title_activity_logout">Cerrando sesión</string>
 
 </resources>

@@ -64,8 +64,7 @@ public class ChangePasswordActivity extends ActionBarActivity
     }
 
     @Override public void failure(RetrofitError error) {
-        ToastService.byResource(this, R.string.message_client_request_failed);
-        Log.e(TAG, "", BoolExceptionConverter.parse(error));
+        ToastService.error(this, error);
         finish();
     }
 }

@@ -20,6 +20,7 @@ import co.gov.inci.evaluon.backend.models.proxies.EvalueesProxy;
 import co.gov.inci.evaluon.backend.models.proxies.UserProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
+import co.gov.inci.evaluon.backend.validators.MailValidator;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -55,6 +56,7 @@ public class UpdateUserActivity extends ActionBarActivity
         type = (RadioGroup)findViewById(R.id.option_group_types);
 
         email = (EditText)findViewById(R.id.text_mail);
+        email.setOnFocusChangeListener(new MailValidator(this));
 
         send = (Button)findViewById(R.id.button_send);
         send.setOnClickListener(this);
@@ -127,7 +129,7 @@ public class UpdateUserActivity extends ActionBarActivity
         }
 
         @Override public void failure(RetrofitError error) {
-            ToastService.byResource(UpdateUserActivity.this, R.string.message_request_failed);
+            ToastService.error(UpdateUserActivity.this, error);
             Log.e(TAG, "", BoolExceptionConverter.parse(error));
         }
     };

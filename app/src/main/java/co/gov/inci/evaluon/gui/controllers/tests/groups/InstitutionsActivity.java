@@ -30,6 +30,12 @@ public class InstitutionsActivity extends ActionBarActivity implements Callback<
         Institution[] institutions = apiResponse.getData();
         ImageMenuItem[] items = new ImageMenuItem[institutions.length];
 
+        if(institutions.length <= 0){
+            ToastService.byResource(this, R.string.error_no_institutions_available);
+            finish();
+            return;
+        }
+
         for(int i = 0; i < institutions.length; i++){
             Intent intent = new Intent(this, GroupsActivity.class);
             intent.putExtra("id", institutions[i].getId());
@@ -47,8 +53,7 @@ public class InstitutionsActivity extends ActionBarActivity implements Callback<
     }
 
     @Override public void failure(RetrofitError error) {
-        BoolException exception = (BoolException)BoolExceptionConverter.parse(error);
-        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        ToastService.error(this, error);
         finish();
     }
 }

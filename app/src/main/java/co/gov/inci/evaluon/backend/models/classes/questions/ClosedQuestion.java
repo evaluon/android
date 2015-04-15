@@ -50,9 +50,9 @@ public class ClosedQuestion extends Question implements RadioGroup.OnCheckedChan
         return -1;
     }
 
-    private int lookAnswer(int id){
+    private int lookAnswer(String id){
         for(int i = 0; i < questionOptions.length; i++){
-            if(questionOptions[i].getId() == id) return i;
+            if(questionOptions[i].getId() == Integer.parseInt(id)) return i;
         }
         return -1;
     }

@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import co.gov.inci.evaluon.R;
+
 /**
  * @author Pablo Andrés Dorado Suárez <pandres95@boolinc.co>
  */
@@ -44,7 +46,11 @@ public class ResourcesMenuItem extends MenuItem implements View.OnClickListener 
     }
 
     @Override public void drawImage(ImageView iv) {
-        iv.setContentDescription(getContext().getString(getDescriptorText()));
+        iv.setContentDescription(String.format(
+                "%s. %s.",
+                getContext().getString(getDescriptorText()),
+                getContext().getString(R.string.descriptor_button)
+        ));
         iv.setImageResource(getImage());
     }
 

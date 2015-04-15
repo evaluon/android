@@ -41,7 +41,8 @@ public class SettingsActivity extends ActionBarActivity {
                         new ResourcesMenuItem(
                                 R.string.label_about,
                                 R.string.descriptor_about,
-                                R.drawable.ic_turnoff
+                                R.drawable.ic_turnoff,
+                                new Intent(this, AboutActivity.class)
                         )
                 })
         );

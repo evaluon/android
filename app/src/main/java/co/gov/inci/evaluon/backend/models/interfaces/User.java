@@ -1,5 +1,6 @@
 package co.gov.inci.evaluon.backend.models.interfaces;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -36,12 +37,20 @@ public abstract class User {
     @JsonDeserialize(using = JavascriptDateDeserializer.class )
     @JsonProperty("birth_date") private Date birthday;
 
+    @JsonDeserialize(using = JavascriptDateDeserializer.class )
+    @JsonProperty("register_date") private Date registerDate;
+
     public User(){
         this(null, null, null, null, null, null, null);
     }
 
     public User(String id, String firstName, String middleName, String lastName, String email,
-                   String password, Date birthday) {
+                String password, Date birthday) {
+        this(id, firstName, middleName, lastName, email, password, birthday, null);
+    }
+
+    public User(String id, String firstName, String middleName, String lastName, String email,
+                   String password, Date birthday, Date registerDate) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -49,12 +58,14 @@ public abstract class User {
         this.email = email;
         this.password = password;
         this.birthday = birthday;
+        this.registerDate = registerDate;
     }
 
     public String getId() {
         return id;
     }
 
+    @JsonIgnore
     public String getName() {
         return String.format("%s %s", getFirstName(), getLastName());
     }
@@ -81,6 +92,10 @@ public abstract class User {
 
     public Date getBirthday() {
         return birthday;
+    }
+
+    public Date getRegisterDate() {
+        return registerDate;
     }
 
     public void setId(String id) {

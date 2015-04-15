@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application Messages -->
+    <string name="message_missing_fields">One or more fields are incomplete. Please verify your data.</string>
+    <string name="message_register_failed">An error has occurred, please verify your data.</string>
+    <string name="message_one_account_allowed">You can add just one account at same time</string>
+    <string name="message_request_failed">An error has occurred while contacting to server. Please check your internet connection.</string>
+    <string name="message_client_request_failed">An error has occurred while trying to connect to server. Please contact tech support.</string>
+    <string name="message_client_register_failed">An error has occurred while starting application. Please contact tech support.</string>
+    <string name="message_cant_edit">Can\'t be edited</string>
+    <string name="message_success_update">Successfully updated</string>
+
+    <string name="error_missing_fields">One or more data are incomplete. Please check again</string>
+    <string name="error_no_active_groups">There are no available groups</string>
+    <string name="error_no_active_period">This group is not available at this time</string>
+    <string name="error_no_active_tests">There are no available tests</string>
+    <string name="error_invalid_hotp_code">Invalid security code</string>
+    <string name="error_is_evaluee">This action can\'t be executed by a student</string>
+    <string name="error_invalid_permissions">You don\'t have permissions to get this resources</string>
+    <string name="error_not_an_evaluee">This action can\'t be executed by a teacher</string>
+    <string name="error_not_evaluees">Some of the users aren\'t students</string>
+    <string name="error_test_unopened">This test isn\'t opened yet</string>
+    <string name="error_unabled_institution">This action can\'t be executed over this institution.</string>
+    <string name="error_insuficient_privileges">You aren\'t granted to get this resources</string>
+    <string name="error_invalid_grant">User and password aren\'t correct</string>
+    <string name="error_access_denied">The user is already blocked</string>
+    <string name="error_already_opened_test">The test you\'re trying to open has been already opened</string>
+    <string name="error_existing_user">The user already exists</string>
+    <string name="error_test_unavailable">Selected test is unavailable</string>
+    <string name="error_client_not_found">Application client not found</string>
+    <string name="error_no_questions_available">There aren\'t available questions</string>
+    <string name="error_test_not_found">An exam wasn\'t found</string>
+    <string name="error_unknown">Unknown error. Please try again or contact tech support.</string>
+    <string name="error_no_institutions_available">You don\'t have active institutions, please get in contact with your tutor (teacher) to solve the issue.</string>
+
+</resources>

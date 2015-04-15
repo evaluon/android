@@ -61,8 +61,7 @@ public class GroupsActivity extends ActionBarActivity implements Callback<ApiRes
     }
 
     @Override public void failure(RetrofitError error) {
-        BoolException exception = (BoolException)BoolExceptionConverter.parse(error);
-        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        ToastService.error(this, error);
         finish();
     }
 

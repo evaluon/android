@@ -11,6 +11,7 @@ import android.os.Bundle;
 
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.services.accounts.Constants;
+import co.gov.inci.evaluon.backend.services.accounts.activities.Authenticator;
 import co.gov.inci.evaluon.gui.controllers.account.LoginActivity;
 
 /**
@@ -52,10 +53,10 @@ public class AccountAuthenticator extends AbstractAccountAuthenticator {
 
             final Intent intent;
 
-            intent = new Intent(context, LoginActivity.class);
-            intent.putExtra(LoginActivity.PARAM_AUTHTOKEN_TYPE, authTokenType);
+            intent = new Intent(context, Authenticator.class);
+            intent.putExtra(Authenticator.PARAM_AUTHTOKEN_TYPE, authTokenType);
             intent.putExtra(AccountManager.KEY_ACCOUNT_AUTHENTICATOR_RESPONSE, response);
-            intent.putExtra(LoginActivity.EXTRA_REQUEST_CODE, LoginActivity.REQ_CODE_CREATE);
+            intent.putExtra(Authenticator.EXTRA_REQUEST_CODE, 1);
 
             result.putParcelable(AccountManager.KEY_INTENT, intent);
 

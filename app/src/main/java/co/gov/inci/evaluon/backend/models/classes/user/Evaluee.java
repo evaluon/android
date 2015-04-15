@@ -92,7 +92,7 @@ public class Evaluee extends User {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonIgnoreProperties(ignoreUnknown = true) public class Info implements Serializable {
+    @JsonIgnoreProperties(ignoreUnknown = true) public static class Info implements Serializable {
 
         @JsonProperty("gender_id") private int gender = 0;
         @JsonProperty("disability_id") private int disability = 0;

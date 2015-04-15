@@ -10,9 +10,9 @@ import java.io.Serializable;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Answer implements Serializable {
 
-    @JsonProperty("test_id") private Integer testId;
+    @JsonProperty("test_id") private String testId;
     @JsonProperty("question_id") private Integer questionId;
-    @JsonProperty("answer_id") private Integer answerId;
+    @JsonProperty("answer_id") private String answerId;
     @JsonProperty("text") private String text;
 
     public Answer(){
@@ -20,27 +20,27 @@ public class Answer implements Serializable {
     }
 
     public Answer(Integer testId, Integer questionId){
-        this.testId = testId;
+        this.testId = String.valueOf(testId);
         this.questionId = questionId;
         this.text = null;
         this.answerId = null;
     }
 
     public Answer(Integer testId, Integer questionId, String text) {
-        this.testId = testId;
+        this.testId = String.valueOf(testId);
         this.questionId = questionId;
         this.answerId = null;
         this.text = text;
     }
 
     public Answer(Integer testId, Integer questionId, Integer answerId) {
-        this.testId = testId;
+        this.testId = String.valueOf(testId);
         this.questionId = questionId;
-        this.answerId = answerId;
+        this.answerId = String.valueOf(answerId);
         this.text = null;
     }
 
-    public Integer getTestId() {
+    public String getTestId() {
         return testId;
     }
 
@@ -48,11 +48,12 @@ public class Answer implements Serializable {
         return questionId;
     }
 
-    public Integer getAnswerId() {
+    public String getAnswerId() {
         return answerId;
     }
 
     public String getText() {
         return text;
     }
+
 }

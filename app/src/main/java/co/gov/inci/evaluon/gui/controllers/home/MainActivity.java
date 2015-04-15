@@ -9,6 +9,8 @@ import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.adapters.ResourcesMenuItem;
 import co.gov.inci.evaluon.gui.adapters.listadapters.ImageMenuListAdapter;
 import co.gov.inci.evaluon.gui.controllers.account.LogoutActivity;
+import co.gov.inci.evaluon.gui.controllers.results.average.IndicatorActivity;
+import co.gov.inci.evaluon.gui.controllers.results.institutional.InstitutionListActivity;
 import co.gov.inci.evaluon.gui.controllers.tests.groups.InstitutionsActivity;
 import co.gov.inci.evaluon.gui.controllers.settings.SettingsActivity;
 import co.gov.inci.evaluon.gui.controllers.tests.list.SelfTestListActivity;
@@ -35,12 +37,14 @@ public class MainActivity extends ActionBarActivity {
                         new ResourcesMenuItem(
                                 R.string.label_results,
                                 R.string.descriptor_results,
-                                R.drawable.ic_results
+                                R.drawable.ic_results,
+                                new Intent(this, InstitutionListActivity.class)
                         ),
                         new ResourcesMenuItem(
                                 R.string.label_average,
                                 R.string.descriptor_average,
-                                R.drawable.ic_average
+                                R.drawable.ic_average,
+                                new Intent(this, IndicatorActivity.class)
                         ),
                         new ResourcesMenuItem(
                                 R.string.label_settings,

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Institutions activity -->
+    <string name="title_activity_institutions">Instituciones</string>
+
+    <!-- Groups activity -->
+    <string name="title_activity_groups">Grupos</string>
+
+    <!-- Tests activity -->
+    <string name="title_activity_test_list">Examenes</string>
+    <string name="label_begin_test">Empezar prueba</string>
+    <string name="descriptor_begin_test">Empezar prueba. Botón.</string>
+
+    <!-- Test password activity -->
+    <string name="title_activity_test_password">Ingresar a examen</string>
+
+    <!-- Knowledge areas activity -->
+    <string name="title_activity_knowledge_areas">Áreas de conocimiento</string>
+
+    <!-- Questions activity -->
+    <string name="message_evaluation_nulling">Ten en cuenta que el examen se anulará al cerrar la aplicación</string>
+    <string name="message_evaluation_question_types">En el examen se pueden utilizar preguntas de selección múltiple con única respuesta y preguntas abiertas de respuesta corta.</string>
+    <string name="message_evaluation_question_type_closed">
+        Las preguntas de selección múltiple con única respuesta están conformadas por un enunciado, la formulación de una tarea de evaluación y cuatro opciones de respuesta, codificadas como A, B, C y D, de las cuales sólo una es correcta o válida dada la tarea planteada.\n
+        Puedes desplazarte por las preguntas y respuestas, cuándo quieras responder acertadamente a una opción solo basta un doble click.
+    </string>
+    <string name="message_evaluation_question_type_open">
+        Las preguntas abiertas de respuesta corta no presentan opciones de respuesta. El estudiante construye (produce, elabora, escribe) una respuesta de acuerdo con la tarea que se le ha asignado, en el espacio definido.\n
+        Puedes resplazarte por las preguntas y respuestas, cuándo quieras responder solo basta llenar el campo de texto.
+    </string>
+
+    <string name="title_activity_pre_questions">Preguntas</string>
+    <string name="title_activity_questions">Examen de %s</string>
+
+    <string name="label_questions">Preguntas</string>
+
+    <string name="hint_open_question">Ingrese la respuesta</string>
+
+    <string name="label_hide_questions">Ver preguntas no contestadas</string>
+    <string name="label_send">Enviar</string>
+
+</resources>

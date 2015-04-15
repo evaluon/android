@@ -73,7 +73,7 @@ public class SplashActivity extends ActionBarActivity implements Callback<ApiRes
     }
 
     @Override public void failure(RetrofitError error) {
-        Log.e(TAG, "", BoolExceptionConverter.parse(error));
+        ToastService.error(this, error);
         finish();
     }
 

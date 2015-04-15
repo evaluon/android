@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application Messages -->
+    <string name="message_missing_fields">Uno o más campos están incompletos. Por favor verifique sus datos.</string>
+    <string name="message_register_failed">Ha ocurrido un error, por favor verifique sus datos.</string>
+    <string name="message_one_account_allowed">Solo se permite agregar una cuenta al tiempo</string>
+    <string name="message_request_failed">Ha ocurrido un error al conectarse al servidor. Por favor revise su conexión a internet.</string>
+    <string name="message_client_request_failed">Ha ocurrido un error al intentar conectarse con el servidor. Por favor contacte a soporte técnico.</string>
+    <string name="message_client_register_failed">Ha ocurrido un error inicializando la aplicación. Por favor contacte a soporte técnico.</string>
+    <string name="message_cant_edit">No se puede editar</string>
+    <string name="message_success_update">Actualización realizada correctamente</string>
+    <string name="message_test_finished">Examen finalizado exitosamente</string>
+
+    <!-- Application Errors -->
+    <string name="error_missing_fields">Uno o más datos están incompletos. Por favor, verifique sus datos</string>
+    <string name="error_no_active_groups">No hay grupos disponibles</string>
+    <string name="error_no_active_period">Este grupo no está disponible en este momento</string>
+    <string name="error_no_active_tests">No se encuentra un examen disponible</string>
+    <string name="error_invalid_hotp_code">Código de seguridad inválido</string>
+    <string name="error_is_evaluee">Imposible realizar acción. Es un estudiante</string>
+    <string name="error_invalid_permissions">No tienes permiso para acceder a estos recursos</string>
+    <string name="error_not_an_evaluee">Imposible realizar acción. No es un docente</string>
+    <string name="error_not_evaluees">Alguno de los usuarios no es un estudiante</string>
+    <string name="error_test_unopened">Éste test aún no está abierto</string>
+    <string name="error_unabled_institution">Imposible realizar acción sobre esta institución</string>
+    <string name="error_insuficient_privileges">No tienes permiso para acceder a estos recursos</string>
+    <string name="error_invalid_grant">Usuario y contraseña no coinciden</string>
+    <string name="error_access_denied">Usuario Bloqueado</string>
+    <string name="error_already_opened_test">El test que intenta abrir ya ha sido abierto</string>
+    <string name="error_existing_user">El usuario ya existe</string>
+    <string name="error_test_unavailable">La prueba seleccionada no está disponible</string>
+    <string name="error_client_not_found">Cliente de aplicación no encontrado</string>
+    <string name="error_no_questions_available">No hay preguntas disponibles</string>
+    <string name="error_test_not_found">No se encontró un examen</string>
+    <string name="error_unknown">Error desconocido. Por favor reintente o contacte a soporte técnico.</string>
+    <string name="error_no_institutions_available">Usted no tiene instituciones activas, por favor comuníquese con su tutor (profesor) para solucionar el problema.</string>
+
+</resources>

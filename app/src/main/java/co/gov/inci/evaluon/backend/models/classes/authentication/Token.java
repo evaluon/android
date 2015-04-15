@@ -36,4 +36,9 @@ import java.io.Serializable;
     public String getTokenType() {
         return tokenType;
     }
+
+    @Override public String toString(){
+        return String.format("%s %s", getTokenType(), getAccessToken());
+    }
+
 }

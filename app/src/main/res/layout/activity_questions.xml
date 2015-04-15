@@ -25,6 +25,35 @@
 
             android:orientation="vertical" >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/item_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/message_evaluation_nulling"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_label"
+                    android:text="@string/message_evaluation_question_types"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_label"
+                    android:text="@string/message_evaluation_question_type_closed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_label"
+                    android:text="@string/message_evaluation_question_type_open"/>
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/label_questions_title"
                 android:layout_width="match_parent"
@@ -62,6 +91,7 @@
                 <ToggleButton
                     android:id="@+id/toggle_hide_questions"
                     android:layout_width="wrap_content"
+                    android:contentDescription="@string/label_hide_questions"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>

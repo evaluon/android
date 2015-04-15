@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_label"
+            android:text="@string/label_since" />
+
+        <TextView
+            android:id="@+id/text_since_date"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.caverock.androidsvg.SVGImageView
+        android:id="@+id/image_badge"
+        android:layout_gravity="center"
+        android:minHeight="210dp"
+        android:minWidth="210dp"
+        android:layout_marginBottom="@dimen/margin_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_get_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:text="@string/label_get_grade" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.caverock.androidsvg.SVGImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            custom:svg="@drawable/ic_check" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:text="@string/label_right_questions" />
+        <TextView
+            android:id="@+id/text_right_questions"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/orange"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.caverock.androidsvg.SVGImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            custom:svg="@drawable/ic_bars" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:text="@string/label_average_indicator" />
+        <TextView
+            android:id="@+id/text_average"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/orange"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.caverock.androidsvg.SVGImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            custom:svg="@drawable/ic_star_half" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:text="@string/label_remaining_questions" />
+        <TextView
+            android:id="@+id/text_remaining_questions"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/orange"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

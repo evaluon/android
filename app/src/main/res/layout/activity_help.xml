@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Puedes utiliza la navegación por encabezados, hará más ágil el uso de esta aplicación." />
+                android:text="Puedes utilizar la navegación por encabezados, hará más ágil el uso de esta aplicación." />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Presenta el listado de instituciones o organizaciones la cual la persona con discapacidad visual se encuentre inscrita, y dentro a cada una de ellas encontraremos el grupo al que pertenece cada persona, donde encontrará el examen que debe presentar ingresando el código que proveerá el docente o director de la prueba."
+                android:text="Presenta el listado de instituciones u organizaciones en las cuales la persona con discapacidad visual se encuentre inscrita, y dentro a cada una de ellas encontraremos el grupo al que pertenece cada persona, donde encontrará el examen que debe presentar ingresando el código que proveerá el docente o director de la prueba."
                 android:id="@+id/textView4" />
 
             <TextView
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="En el momento de presentar la evaluación puedes desplazarte por los encabezados de las preguntas, cuándo utilices la opción de preguntas no contestadas los encabezados de las preguntas contestadas desaparecerán."
+                android:text="En el momento de presentar la evaluación puedes desplazarte por los encabezados de las preguntas. Cuando utilices la opción de preguntas no contestadas los encabezados de las preguntas contestadas desaparecerán."
                 android:id="@+id/textView6" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="En el momento de presentar la evaluación puedes desplazarte por los encabezados de las preguntas, cuándo utilices la opción de preguntas no contestadas los encabezados de las preguntas contestadas desaparecerán."
+                android:text="En el momento de presentar la evaluación puedes desplazarte por los encabezados de las preguntas. Cuando utilices la opción de preguntas no contestadas los encabezados de las preguntas contestadas desaparecerán."
                 android:id="@+id/textView2" />
 
             <TextView
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/textView12"
-                android:text="Es el ponderado de las practicas que has realizado en el banco de preguntas de evalúate. Veras el número de preguntas que has acertado, así como tu promedio, el número de preguntas que te faltan para alcanzar el próximo nivel de estatus. Entre más practiques, más aumentaras tu promedio." />
+                android:text="Es el ponderado de las prácticas que has realizado en el banco de preguntas de evalúate. Verás el número de preguntas que has acertado, así como tu promedio, el número de preguntas que te faltan para alcanzar el próximo nivel de estatus. Entre más practiques, más aumentaras tu promedio." />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Bronce: Es el primer estatus por llegar a los  8 puntos, es muy fácil de llegar allí, sigue respondiendo preguntas de diferentes asignaturas y llega a Plata"/>
+                android:text="Bronce: Es el primer estatus por llegar a los 8 puntos, es muy fácil llegar allí, sigue respondiendo preguntas de diferentes asignaturas y llega a Plata"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -138,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Oro: Ahora tienes 512  puntos cada vez te vas convirtiendo en un sabelo todo, que esperas quieres ser el mejor? y ganar puntos extras con tus evaluadores? sigue en marcha."/>
+                android:text="Oro: Ahora tienes 512  puntos cada vez te vas convirtiendo en un sabelotodo. ¿Qué esperas? ¿Quieres ser el mejor y ganar puntos extras con tus evaluadores? Sigue en marcha."/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Diamante: Entre 4.096 y 32.768 puntos. Ya eres un berraco poder llegar hasta aquí muy buen trabajo eres un honorable estudiante que podrás generar un gran impacto entre sus compañeros y evaluadores, te has ganado el reconocimiento que mereces."/>
+                android:text="Diamante: Entre 4.096 y 32.768 puntos. Ya eres un berraco al poder llegar hasta aquí muy buen trabajo eres un honorable estudiante que podrás generar un gran impacto entre sus compañeros y evaluadores, te has ganado el reconocimiento que mereces."/>
 
             <TextView
                 android:layout_width="wrap_content"

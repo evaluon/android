@@ -14,6 +14,7 @@ import co.gov.inci.evaluon.backend.models.converters.BoolExceptionConverter;
 import co.gov.inci.evaluon.backend.models.proxies.TestsProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
+import co.gov.inci.evaluon.gui.controllers.home.MainActivity;
 import co.gov.inci.evaluon.gui.controllers.tests.exams.KnowledgeAreasActivity;
 import retrofit.Callback;
 import retrofit.RetrofitError;
@@ -28,7 +29,14 @@ public class TestPasswordActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_password);
         testId = getIntent().getIntExtra("id", 0);
-        ((Button)findViewById(R.id.button_send)).setOnClickListener(this);
+        findViewById(R.id.button_send).setOnClickListener(this);
+    }
+
+    @Override public void onClick(View v) {
+        Test t = new Test(
+                Integer.parseInt(((EditText) findViewById(R.id.text_password)).getText().toString())
+        );
+        new TestsProxy(this).openTest(testId, t, this);
     }
 
     @Override public void success(ApiResponse<Void> voidApiResponse, Response response) {
@@ -40,14 +48,11 @@ public class TestPasswordActivity extends ActionBarActivity
     }
 
     @Override public void failure(RetrofitError error) {
-        BoolException exception = (BoolException) BoolExceptionConverter.parse(error);
-        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        ToastService.error(this, error);
+        Intent i = new Intent(this, MainActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        finish();
     }
 
-    @Override public void onClick(View v) {
-        Test t = new Test(
-                Integer.parseInt(((EditText) findViewById(R.id.text_password)).getText().toString())
-        );
-        new TestsProxy(this).openTest(testId, t, this);
-    }
 }

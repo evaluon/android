@@ -8,9 +8,7 @@ import android.widget.ListView;
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.adapters.MenuItem;
 import co.gov.inci.evaluon.backend.models.adapters.TestMenuItem;
-import co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException;
 import co.gov.inci.evaluon.backend.models.classes.test.Test;
-import co.gov.inci.evaluon.backend.models.converters.BoolExceptionConverter;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
 import co.gov.inci.evaluon.gui.adapters.listadapters.TestMenuListAdapter;
@@ -31,26 +29,33 @@ public class TestListActivity extends ActionBarActivity implements Callback<ApiR
 
     @Override public void success(ApiResponse<Test[]> apiResponse, Response response) {
         Test[] tests = apiResponse.getData();
-        MenuItem[] items = new MenuItem[tests.length];
 
-        for(int i = 0; i < tests.length; i++){
-            Intent intent = new Intent(this, askForPassword?
-                    TestPasswordActivity.class :
-                    KnowledgeAreasActivity.class
+        if(tests.length > 0){
+            MenuItem[] items = new MenuItem[tests.length];
+
+            for(int i = 0; i < tests.length; i++){
+                Intent intent = new Intent(this, askForPassword?
+                        TestPasswordActivity.class :
+                        KnowledgeAreasActivity.class
+                );
+                intent.putExtra("id", tests[i].getId());
+                intent.putExtra("finish_parent", true);
+                items[i] = new TestMenuItem(tests[i].getDescription(), intent);
+            }
+
+            ((ListView)findViewById(R.id.tests_list_view)).setAdapter(
+                    new TestMenuListAdapter(this, items)
             );
-            intent.putExtra("id", tests[i].getId());
-            intent.putExtra("finish_parent", true);
-            items[i] = new TestMenuItem(tests[i].getDescription(), intent);
+        } else {
+            ToastService.byResource(this, R.string.error_test_not_found);
+            finish();
         }
 
-        ((ListView)findViewById(R.id.tests_list_view)).setAdapter(
-                new TestMenuListAdapter(this, items)
-        );
+
     }
 
     @Override public void failure(RetrofitError error) {
-        BoolException exception = (BoolException) BoolExceptionConverter.parse(error);
-        ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+        ToastService.error(this, error);
         finish();
     }
 }

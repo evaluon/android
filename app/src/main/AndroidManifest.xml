@@ -39,13 +39,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".backend.services.accounts.activities.Authenticator"
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".gui.controllers.account.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
+            android:name=".gui.controllers.account.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".gui.controllers.account.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.account.LoginActivity" />
+        </activity>
+
+        <activity
             android:name=".gui.controllers.home.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+
         <activity
             android:name=".gui.controllers.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -62,11 +76,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
-
-        <activity
-            android:name=".gui.controllers.account.LogoutActivity"
-            android:label="@string/title_activity_logout" />
-
         <activity
             android:name=".gui.controllers.settings.UpdateUserActivity"
             android:label="@string/title_activity_update_profile"
@@ -84,6 +93,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.settings.SettingsActivity" />
         </activity>
+        <activity
+            android:name=".gui.controllers.settings.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".gui.controllers.settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.settings.SettingsActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.controllers.account.LogoutActivity"
+            android:label="@string/title_activity_logout" />
 
         <activity
             android:name=".gui.controllers.tests.groups.InstitutionsActivity"
@@ -132,10 +153,10 @@
             android:name=".gui.controllers.tests.exams.KnowledgeAreasActivity"
             android:label="@string/title_activity_knowledge_areas"
             android:parentActivityName=".gui.controllers.home.MainActivity" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".gui.controllers.tests.list.TestListActivity" />
-    </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.tests.list.TestListActivity" />
+        </activity>
         <activity
             android:name=".gui.controllers.tests.exams.QuestionsActivity"
             android:label="@string/title_activity_pre_questions"
@@ -143,6 +164,31 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.tests.list.TestListActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.controllers.results.institutional.InstitutionListActivity"
+            android:label="@string/title_activity_institutions"
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.home.MainActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.results.institutional.TestResultsActivity"
+            android:label="@string/title_activity_test_results"
+            android:parentActivityName=".gui.controllers.results.institutional.InstitutionListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.results.institutional.InstitutionListActivity" />
+        </activity>
+        <activity
+            android:name=".gui.controllers.results.average.IndicatorActivity"
+            android:label="@string/title_activity_indicator"
+            android:parentActivityName=".gui.controllers.home.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.home.MainActivity" />
         </activity>
     </application>
 

@@ -15,6 +15,8 @@ public interface Tests {
 
     @GET("/test/self") public void getSelfTest(Callback<ApiResponse<Test[]>> callback);
 
+    @POST("/test/self") public void createSelfTest(Callback<ApiResponse<Test>> callback);
+
     @POST("/test/{id}/open") public void openTest(
             @Path("id") int id, @Body Test test, Callback<ApiResponse<Void>> callback
     );
