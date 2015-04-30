@@ -32,8 +32,7 @@ public class LoginActivity extends ActionBarActivity
     private String username;
     private String password;
 
-    private Button loginButton;
-    private Button registerButton;
+    private Button loginButton, registerButton, recoverButton;
     private EditText emailField, passwordField;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +41,7 @@ public class LoginActivity extends ActionBarActivity
 
         loginButton = (Button) findViewById(R.id.button_authenticate);
         registerButton = (Button) findViewById(R.id.button_register);
+        recoverButton = (Button) findViewById(R.id.button_reset);
 
         emailField = (EditText) findViewById(R.id.text_mail);
         passwordField = (EditText) findViewById(R.id.text_password);
@@ -53,17 +53,25 @@ public class LoginActivity extends ActionBarActivity
     private void setListeners() {
         loginButton.setOnClickListener(this);
         registerButton.setOnClickListener(this);
+        recoverButton.setOnClickListener(this);
     }
 
     @Override public void onClick(View view) {
         switch(view.getId()){
-            case R.id.button_authenticate:
+            case R.id.button_authenticate: {
                 login();
                 break;
-            case R.id.button_register:
+            }
+            case R.id.button_register: {
                 Intent i = new Intent(this, RegisterActivity.class);
                 startActivityForResult(i, 0);
                 break;
+            }
+            case R.id.button_reset: {
+                Intent i = new Intent(this, ResetPasswordActivity.class);
+                startActivity(i);
+                break;
+            }
         }
     }
 

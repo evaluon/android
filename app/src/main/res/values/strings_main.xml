@@ -27,7 +27,7 @@
     <string name="hint_surname">Ingrese los apellidos</string>
 
     <string name="label_birthday">Fecha de nacimiento</string>
-    <string name="hint_birthday">Ingrese la fecha de nacimiento</string>
+    <string name="hint_birthday">Año (4 números), guión, Mes (2 números), guión, Día(2 números)</string>
 
     <string name="label_gender">Género</string>
     <string name="option_male">Hombre</string>
@@ -58,6 +58,10 @@
 
     <string name="button_register">Registrar</string>
     <string name="button_update">Actualizar</string>
+
+    <!-- Reset password Activity -->
+    <string name="title_activity_reset_password">Recordar Contraseña</string>
+    <string name="label_reset_password_cta">¿Olvidaste la contraseña?</string>
 
     <!-- Main menu -->
     <string name="title_activity_main">Menú Principal</string>

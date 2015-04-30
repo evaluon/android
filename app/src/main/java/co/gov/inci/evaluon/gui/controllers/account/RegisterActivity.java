@@ -9,10 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
-import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import co.gov.inci.evaluon.R;
 import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
@@ -23,12 +24,18 @@ import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.accounts.helpers.ClientToken;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
 import co.gov.inci.evaluon.backend.services.security.StringHasher;
+import co.gov.inci.evaluon.backend.validators.FieldValidator;
+import co.gov.inci.evaluon.backend.validators.text.DateValidator;
+import co.gov.inci.evaluon.backend.validators.text.MailValidator;
+import co.gov.inci.evaluon.backend.validators.text.NameValidator;
+import co.gov.inci.evaluon.backend.validators.text.PasswordValidator;
+import co.gov.inci.evaluon.backend.validators.text.RepeatPasswordValidator;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 public class RegisterActivity extends ActionBarActivity
-        implements Callback<ApiResponse<User>>, View.OnClickListener, TextWatcher {
+        implements Callback<ApiResponse<User>>, View.OnClickListener {
 
     private EditText idNumber, firstName, lastName, birthday, email, password, repeatPassword;
     private RadioGroup gender, disability, level, type;
@@ -36,11 +43,13 @@ public class RegisterActivity extends ActionBarActivity
     private Evaluee user;
     private Token userToken;
     private AuthenticationProxy api;
+    private ArrayList<FieldValidator> validators;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         bindControls();
+        bindValidators();
         api = new AuthenticationProxy(this);
     }
 
@@ -59,14 +68,88 @@ public class RegisterActivity extends ActionBarActivity
         email = (EditText)findViewById(R.id.text_mail);
         password = (EditText)findViewById(R.id.text_password);
         repeatPassword = (EditText)findViewById(R.id.text_repeat_password);
-        repeatPassword.addTextChangedListener(this);
 
         send = (Button)findViewById(R.id.button_send);
         send.setOnClickListener(this);
     }
 
+    private void bindValidators() {
+        validators = new ArrayList<>();
+
+        // First name validator
+        NameValidator firstNameValidator = new NameValidator(
+                this, firstName, R.string.validation_first_name_required
+        );
+        firstName.addTextChangedListener(firstNameValidator);
+        firstName.setOnFocusChangeListener(firstNameValidator);
+        validators.add(firstNameValidator);
+
+        // Last name validator
+        NameValidator lastNameValidator = new NameValidator(
+                this, lastName, R.string.validation_last_name_required
+        );
+        lastName.addTextChangedListener(lastNameValidator);
+        lastName.setOnFocusChangeListener(lastNameValidator);
+        validators.add(lastNameValidator);
+
+        // Birthday validator
+        DateValidator birthdayValidator = new DateValidator(
+                this, birthday,
+                R.string.validation_birthday_required,
+                "yyyy-MM-dd"
+        );
+        birthday.addTextChangedListener(birthdayValidator);
+        birthday.setOnFocusChangeListener(birthdayValidator);
+        validators.add(birthdayValidator);
+
+        // Email validator
+        MailValidator emailValidator = new MailValidator(this, email);
+        email.addTextChangedListener(emailValidator);
+        email.setOnFocusChangeListener(emailValidator);
+        validators.add(emailValidator);
+
+        // Password validator
+        PasswordValidator passwordValidator = new PasswordValidator(this, password, 6);
+        password.addTextChangedListener(passwordValidator);
+        password.setOnFocusChangeListener(passwordValidator);
+        validators.add(passwordValidator);
+
+        // Repeat password validator
+        RepeatPasswordValidator repeatPasswordValidator = new RepeatPasswordValidator(
+                this, repeatPassword, password
+        );
+        repeatPassword.addTextChangedListener(repeatPasswordValidator);
+        repeatPassword.setOnFocusChangeListener(repeatPasswordValidator);
+        validators.add(repeatPasswordValidator);
+    }
+
+    private void preValidate() throws Exception {
+
+        ArrayList<String> messages = new ArrayList<>();
+
+        for(FieldValidator validator : validators){
+            try {
+                if(!validator.check()) messages.add(validator.getError());
+            } catch (Exception e) {
+                messages.add(validator.getError());
+            }
+        }
+
+        if(messages.size() > 0){
+            StringBuilder builder = new StringBuilder();
+            builder.append(getString(R.string.validation_errors) + "\n");
+            int c = 1;
+            for(String s : messages) {
+                builder.append(c++ + ". " + s + "\n");
+            }
+            throw new Exception(builder.toString());
+        }
+
+    }
+
     @Override public void onClick(View v) {
         try {
+            preValidate();
             Token token = ClientToken.getToken();
             user = new Evaluee(
                     idNumber.getText().toString(),
@@ -80,7 +163,7 @@ public class RegisterActivity extends ActionBarActivity
             );
             api.register(token.toString(), user, this);
         } catch (Exception e) {
-            // TODO: Birthday ParseException message
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -117,6 +200,7 @@ public class RegisterActivity extends ActionBarActivity
             intent.putExtra("password", user.getPassword());
             intent.putExtra("token", userToken);
             setResult(RESULT_OK, intent);
+            finish();
         }
 
         @Override public void failure(RetrofitError error) {
@@ -124,21 +208,4 @@ public class RegisterActivity extends ActionBarActivity
         }
     };
 
-    @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override public void afterTextChanged(Editable s) {
-        if(!password.getText().toString().equals("")){
-            if(repeatPassword.getText().toString().equals(password.getText().toString())){
-                send.setEnabled(true);
-                return;
-            }
-        }
-        send.setEnabled(false);
-    }
 }

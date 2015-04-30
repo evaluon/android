@@ -29,7 +29,7 @@
     <string name="hint_surname">Enter last name</string>
 
     <string name="label_birthday">Birthday</string>
-    <string name="hint_birthday">Enter birthday</string>
+    <string name="hint_birthday">Year (4 numbers), dash, Month (2 numbers), dash, Day (2 numbers)</string>
 
     <string name="label_gender">Gender</string>
     <string name="option_male">Male</string>
@@ -60,6 +60,10 @@
 
     <string name="button_register">Register</string>
     <string name="button_update">Update</string>
+
+    <!-- Reset password Activity -->
+    <string name="title_activity_reset_password">Recover Password</string>
+    <string name="label_reset_password_cta">Forgot your password?</string>
 
     <!-- Main menu -->
     <string name="title_activity_main">Main Menu</string>

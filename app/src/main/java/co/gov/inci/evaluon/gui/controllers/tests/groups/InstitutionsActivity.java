@@ -32,7 +32,6 @@ public class InstitutionsActivity extends ActionBarActivity implements Callback<
 
         if(institutions.length <= 0){
             ToastService.byResource(this, R.string.error_no_institutions_available);
-            finish();
             return;
         }
 

@@ -35,6 +35,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:text="@string/label_instructions"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
                     android:text="@string/message_evaluation_nulling"/>
                 <TextView
                     android:layout_width="wrap_content"

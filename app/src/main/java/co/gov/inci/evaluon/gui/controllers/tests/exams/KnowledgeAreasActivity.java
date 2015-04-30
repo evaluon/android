@@ -68,11 +68,11 @@ public class KnowledgeAreasActivity extends ActionBarActivity
 
     private Callback<ApiResponse<Void>> testCloseCallback = new Callback<ApiResponse<Void>>() {
         @Override public void success(ApiResponse<Void> voidApiResponse, Response response) {
-            ToastService.byResource(KnowledgeAreasActivity.this, R.string.message_test_finished);
             Intent intent = new Intent(KnowledgeAreasActivity.this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
+            ToastService.byResource(KnowledgeAreasActivity.this, R.string.message_test_finished);
         }
 
         @Override public void failure(RetrofitError error) {

@@ -54,6 +54,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gui.controllers.account.LoginActivity" />
         </activity>
+        <activity
+            android:name=".gui.controllers.account.ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password"
+            android:parentActivityName=".gui.controllers.account.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.controllers.account.LoginActivity" />
+        </activity>
 
         <activity
             android:name=".gui.controllers.home.MainActivity"

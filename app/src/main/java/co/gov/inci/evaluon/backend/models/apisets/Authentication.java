@@ -1,5 +1,6 @@
 package co.gov.inci.evaluon.backend.models.apisets;
 
+import co.gov.inci.evaluon.backend.models.adapters.RESET;
 import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
 import co.gov.inci.evaluon.backend.models.classes.user.Evaluee;
 import co.gov.inci.evaluon.backend.models.interfaces.User;
@@ -41,6 +42,12 @@ public interface Authentication {
             @Header("Authorization") String authorization,
             @Body Evaluee.Info evaluee,
             Callback<ApiResponse<Void>> evalueeCallback
+    );
+
+    @RESET("/user") public void resetPassword(
+            @Header("Authorization") String authorization,
+            @Body User user,
+            Callback<ApiResponse<Void>> callback
     );
 
 }

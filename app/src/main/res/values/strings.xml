@@ -9,8 +9,8 @@
     <string name="title_activity_splash" translatable="false">Evaluon</string>
 
     <!-- API -->
-    <string name="endpointUrl" translatable="false">http://evaluon.boolinc.co</string>
-    <string name="cdnUrl" translatable="false">http://cdn.boolinc.co/evaluon</string>
+    <string name="endpointUrl" translatable="false">http://evaluon.gentebool.com</string>
+    <string name="cdnUrl" translatable="false">http://cdn.gentebool.com/evaluon</string>
     <string name="placeHoldItUrl" translatable="false">http://placehold.it/180/FFFFFF/00427a&amp;text=</string>
     <string name="client_id" translatable="false">administrator</string>
     <string name="client_secret" translatable="false">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>

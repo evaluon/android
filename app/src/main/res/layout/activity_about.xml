@@ -67,8 +67,8 @@
                     android:adjustViewBounds="true"
                     android:layout_width="wrap_content"
                     android:layout_height="120dp"
-                    android:contentDescription="@string/gobierno_colombia"
-                    android:src="@drawable/ic_gobierno_colombia" />
+                    android:contentDescription="@string/mintic"
+                    android:src="@drawable/ic_mintic" />
 
                 <ImageView
                     android:adjustViewBounds="true"

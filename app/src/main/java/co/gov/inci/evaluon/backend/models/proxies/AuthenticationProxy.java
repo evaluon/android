@@ -36,4 +36,8 @@ public class AuthenticationProxy extends ApiProxy<Authentication> {
         api.createEvaluee(authorization, evaluee, callback);
     }
 
+    public void resetPassword(String authorization, User user, Callback<ApiResponse<Void>> cb){
+        api.resetPassword(authorization, user, cb);
+    }
+
 }

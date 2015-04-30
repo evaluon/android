@@ -10,7 +10,9 @@
     <string name="message_client_register_failed">An error has occurred while starting application. Please contact tech support.</string>
     <string name="message_cant_edit">Can\'t be edited</string>
     <string name="message_success_update">Successfully updated</string>
+    <string name="message_test_finished">Test successfully finished</string>
 
+    <!-- Application Errors -->
     <string name="error_missing_fields">One or more data are incomplete. Please check again</string>
     <string name="error_no_active_groups">There are no available groups</string>
     <string name="error_no_active_period">This group is not available at this time</string>

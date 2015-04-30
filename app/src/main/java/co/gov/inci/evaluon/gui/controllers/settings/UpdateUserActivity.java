@@ -7,9 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import co.gov.inci.evaluon.R;
@@ -20,7 +21,10 @@ import co.gov.inci.evaluon.backend.models.proxies.EvalueesProxy;
 import co.gov.inci.evaluon.backend.models.proxies.UserProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import co.gov.inci.evaluon.backend.services.gui.ToastService;
-import co.gov.inci.evaluon.backend.validators.MailValidator;
+import co.gov.inci.evaluon.backend.validators.FieldValidator;
+import co.gov.inci.evaluon.backend.validators.text.DateValidator;
+import co.gov.inci.evaluon.backend.validators.text.MailValidator;
+import co.gov.inci.evaluon.backend.validators.text.NameValidator;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -33,6 +37,7 @@ public class UpdateUserActivity extends ActionBarActivity
     private RadioGroup gender, disability, level, type;
     private Button send;
     private Evaluee user;
+    private ArrayList<FieldValidator> validators;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,14 +61,76 @@ public class UpdateUserActivity extends ActionBarActivity
         type = (RadioGroup)findViewById(R.id.option_group_types);
 
         email = (EditText)findViewById(R.id.text_mail);
-        email.setOnFocusChangeListener(new MailValidator(this));
 
         send = (Button)findViewById(R.id.button_send);
         send.setOnClickListener(this);
     }
 
+
+    private void bindValidators() {
+        validators = new ArrayList<>();
+
+        // First name validator
+        NameValidator firstNameValidator = new NameValidator(
+                this, firstName, R.string.validation_first_name_required
+        );
+        firstName.addTextChangedListener(firstNameValidator);
+        firstName.setOnFocusChangeListener(firstNameValidator);
+        validators.add(firstNameValidator);
+
+        // Last name validator
+        NameValidator lastNameValidator = new NameValidator(
+                this, lastName, R.string.validation_last_name_required
+        );
+        lastName.addTextChangedListener(lastNameValidator);
+        lastName.setOnFocusChangeListener(lastNameValidator);
+        validators.add(lastNameValidator);
+
+        // Birthday validator
+        DateValidator birthdayValidator = new DateValidator(
+                this, birthday,
+                R.string.validation_birthday_required,
+                "yyyy-MM-dd"
+        );
+        birthday.addTextChangedListener(birthdayValidator);
+        birthday.setOnFocusChangeListener(birthdayValidator);
+        validators.add(birthdayValidator);
+
+        // Email validator
+        MailValidator emailValidator = new MailValidator(this, email);
+        email.addTextChangedListener(emailValidator);
+        email.setOnFocusChangeListener(emailValidator);
+        validators.add(emailValidator);
+
+    }
+
+    private void preValidate() throws Exception {
+
+        ArrayList<String> messages = new ArrayList<>();
+
+        for(FieldValidator validator : validators){
+            try {
+                if(!validator.check()) messages.add(validator.getError());
+            } catch (Exception e) {
+                messages.add(validator.getError());
+            }
+        }
+
+        if(messages.size() > 0){
+            StringBuilder builder = new StringBuilder();
+            builder.append(getString(R.string.validation_errors) + "\n");
+            int c = 1;
+            for(String s : messages) {
+                builder.append(c++ + ". " + s + "\n");
+            }
+            throw new Exception(builder.toString());
+        }
+
+    }
+
     @Override public void onClick(View v) {
         try {
+            preValidate();
             User updateUser = new Evaluee(
                     idNumber.getText().toString(),
                     firstName.getText().toString(),
@@ -75,8 +142,8 @@ public class UpdateUserActivity extends ActionBarActivity
                     null
             );
             new UserProxy(this).update(updateUser, updateCallback);
-        } catch (ParseException e) {
-            // TODO: Birthday ParseException message
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -99,6 +166,8 @@ public class UpdateUserActivity extends ActionBarActivity
         level.check(Evaluee.levels[((Evaluee)user).getEvaluee().getLevel()]);
 
         email.setText(user.getEmail());
+
+        bindValidators();
     }
 
     @Override public void failure(RetrofitError error) {

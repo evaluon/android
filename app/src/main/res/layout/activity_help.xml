@@ -126,37 +126,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Bronce: Es el primer estatus por llegar a los 8 puntos, es muy fácil llegar allí, sigue respondiendo preguntas de diferentes asignaturas y llega a Plata"/>
+                android:text="Bronce: Es el primer nivel de estatus, alcanzado entre 0 y 8 puntos. Es muy fácil llegar allí, así que sigue respondiendo preguntas de diferentes asignaturas y llegaras a Plata"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Plata: Solo un poco de tiempo para llegar hasta aquí con 64 puntos, pero desafía tu conocimiento y sigue practicando."/>
+                android:text="Plata: Solo un poco de tiempo para llegar hasta aquí, con 8 puntos, pero desafía tu conocimiento y sigue practicando."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Oro: Ahora tienes 512  puntos cada vez te vas convirtiendo en un sabelotodo. ¿Qué esperas? ¿Quieres ser el mejor y ganar puntos extras con tus evaluadores? Sigue en marcha."/>
+                android:text="Oro: Ahora tienes 64 puntos; cada vez te vas convirtiendo en un sabelotodo. ¿Qué esperas? ¿Quieres ser el mejor y ganar puntos extras con tus evaluadores? Sigue en marcha."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Platino: Debes tener entre 512 y 4096 puntos no es tarea facil pero confiamos en ti, así que no te rindas, el banco de preguntas son infinitas para lograr este puntaje."/>
+                android:text="Platino: Debes tener entre 512 y 4096 puntos. No es tarea fácil pero confiamos en ti, así que no te rindas, el banco de preguntas son infinitas para lograr este puntaje."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Diamante: Entre 4.096 y 32.768 puntos. Ya eres un berraco al poder llegar hasta aquí muy buen trabajo eres un honorable estudiante que podrás generar un gran impacto entre sus compañeros y evaluadores, te has ganado el reconocimiento que mereces."/>
+                android:text="Diamante: Entre 4.096 y 32.768 puntos. Ya eres un berraco por llegar hasta aquí. Muy buen trabajo, eres un honorable estudiante y podrás generar un gran impacto entre sus compañeros y profesores, te has ganado el reconocimiento que mereces."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Ultimate: Animate para tener 32.768 y 262.144 puntos, o más, quieres ser el gurú de tu institución llega a este nivel y logra el desafío más honorable de nuestro pais."/>
+                android:text="Ultimate: Animate para alcanzar 32.768 o más. Al llegar a este nivel serás un gurú y lograrás el desafío más honorable de todos."/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

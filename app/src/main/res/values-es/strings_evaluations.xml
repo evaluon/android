@@ -33,6 +33,7 @@
     <string name="title_activity_pre_questions">Preguntas</string>
     <string name="title_activity_questions">Examen de %s</string>
 
+    <string name="label_instructions">Instrucciones</string>
     <string name="label_questions">Preguntas</string>
 
     <string name="hint_open_question">Ingrese la respuesta</string>

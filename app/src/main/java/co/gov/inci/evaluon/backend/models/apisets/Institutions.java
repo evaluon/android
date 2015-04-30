@@ -6,6 +6,7 @@ import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;
+import retrofit.http.Query;
 
 public interface Institutions {
 
@@ -13,8 +14,8 @@ public interface Institutions {
             Callback<ApiResponse<Institution[]>> institutionsCallback
     );
 
-    @GET("/group/{id}") public void getGroups(
-            @Path("id") int id, Callback<ApiResponse<Group[]>> groupsCallback
+    @GET("/evaluee/group") public void getGroups(
+            @Query("id") int id, Callback<ApiResponse<Group[]>> groupsCallback
     );
 
 }

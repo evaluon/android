@@ -33,6 +33,7 @@
     <string name="title_activity_pre_questions">Questions</string>
     <string name="title_activity_questions">%s Test</string>
 
+    <string name="label_instructions">Instructions</string>
     <string name="label_questions">Questions</string>
 
     <string name="hint_open_question">Enter answer</string>
