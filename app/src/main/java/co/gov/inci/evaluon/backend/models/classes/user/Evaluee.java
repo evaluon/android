@@ -47,11 +47,8 @@ public class Evaluee extends User {
     };
 
     private static int lookFor(int[] array, int id){
-        for(int i = 0; i < array.length; i++){
-            if(array[i] == id){
-                return i;
-            }
-        }
+        for(int i = 0; i < array.length; i++)
+            if(array[i] == id) return i;
         return -1;
     }
 

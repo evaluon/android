@@ -38,7 +38,7 @@ public interface Authentication {
             Callback<ApiResponse<User>> callback
     );
 
-    @PUT("/evaluee") public void createEvaluee(
+    @POST("/evaluee") public void createEvaluee(
             @Header("Authorization") String authorization,
             @Body Evaluee.Info evaluee,
             Callback<ApiResponse<Void>> evalueeCallback
