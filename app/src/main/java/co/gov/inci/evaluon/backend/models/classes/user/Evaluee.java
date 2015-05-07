@@ -94,6 +94,7 @@ public class Evaluee extends User {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonIgnoreProperties(ignoreUnknown = true) public static class Info implements Serializable {
 
+        @JsonProperty("id") private String id;
         @JsonProperty("gender_id") private int gender = 0;
         @JsonProperty("disability_id") private int disability = 0;
         @JsonProperty("evaluee_type") private int type = 0;
@@ -104,6 +105,11 @@ public class Evaluee extends User {
         }
 
         public Info(int gender, int disability, int type, int level) {
+            this(null, gender, disability, type, level);
+        }
+
+        public Info(String id, int gender, int disability, int type, int level) {
+            this.id = id;
             this.gender = gender;
             this.disability = disability;
             this.type = type;

@@ -35,6 +35,7 @@ import co.gov.inci.evaluon.R;
         put("client_not_found", R.string.error_client_not_found);
         put("no_questions_available", R.string.error_no_questions_available);
         put("test_not_found", R.string.error_test_not_found);
+        put("user_not_found", R.string.error_user_not_found);
 
     }};
 

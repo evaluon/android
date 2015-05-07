@@ -160,10 +160,12 @@ public class UpdateUserActivity extends ActionBarActivity
         final Date userBirthday = user.getBirthday();
         birthday.setText(new SimpleDateFormat("yyyy-MM-dd").format(userBirthday));
 
-        gender.check(Evaluee.genders[((Evaluee)user).getEvaluee().getGender()]);
-        disability.check(Evaluee.disabilities[((Evaluee)user).getEvaluee().getDisability()]);
-        type.check(Evaluee.types[((Evaluee)user).getEvaluee().getType()]);
-        level.check(Evaluee.levels[((Evaluee)user).getEvaluee().getLevel()]);
+        if(user.getEvaluee() != null){
+            gender.check(Evaluee.genders[user.getEvaluee().getGender()]);
+            disability.check(Evaluee.disabilities[user.getEvaluee().getDisability()]);
+            type.check(Evaluee.types[user.getEvaluee().getType()]);
+            level.check(Evaluee.levels[user.getEvaluee().getLevel()]);
+        }
 
         email.setText(user.getEmail());
 
@@ -178,10 +180,13 @@ public class UpdateUserActivity extends ActionBarActivity
     Callback<ApiResponse<User>> updateCallback = new Callback<ApiResponse<User>>() {
         @Override public void success(ApiResponse<User> userApiResponse, Response response) {
             Evaluee.Info evaluee = user.getEvaluee();
+
+            if(evaluee == null) evaluee = new Evaluee.Info();
             evaluee.setGender(Evaluee.genderById(gender.getCheckedRadioButtonId()));
             evaluee.setDisability(Evaluee.disabilitiesById(disability.getCheckedRadioButtonId()));
             evaluee.setType(Evaluee.typesById(type.getCheckedRadioButtonId()));
             evaluee.setLevel(Evaluee.levelsById(level.getCheckedRadioButtonId()));
+
             new EvalueesProxy(UpdateUserActivity.this).update(evaluee, evalueeUpdateCallback);
         }
 

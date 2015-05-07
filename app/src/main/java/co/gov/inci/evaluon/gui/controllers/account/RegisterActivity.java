@@ -179,6 +179,7 @@ public class RegisterActivity extends ActionBarActivity
         @Override public void success(Token token, Response response) {
             userToken = token;
             Evaluee.Info evaluee = new Evaluee.Info(
+                    user.getId(),
                     Evaluee.genderById(gender.getCheckedRadioButtonId()),
                     Evaluee.disabilitiesById(disability.getCheckedRadioButtonId()),
                     Evaluee.typesById(type.getCheckedRadioButtonId()),

@@ -15,7 +15,7 @@ public interface Institutions {
     );
 
     @GET("/evaluee/group") public void getGroups(
-            @Query("id") int id, Callback<ApiResponse<Group[]>> groupsCallback
+            @Query("institution") int id, Callback<ApiResponse<Group[]>> groupsCallback
     );
 
 }
