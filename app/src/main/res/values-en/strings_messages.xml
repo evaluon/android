@@ -36,5 +36,7 @@
     <string name="error_user_not_found">User and password don\'t match</string>
     <string name="error_unknown">Unknown error. Please try again or contact tech support.</string>
     <string name="error_no_institutions_available">You don\'t have active institutions, please get in contact with your tutor (teacher) to solve the issue.</string>
+    <string name="error_results_not_found">Results weren\'t found for this user</string>
+
 
 </resources>

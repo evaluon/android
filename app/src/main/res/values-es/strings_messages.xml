@@ -36,5 +36,6 @@
     <string name="error_user_not_found">El usuario y contraseña no coinciden</string>
     <string name="error_unknown">Error desconocido. Por favor reintente o contacte a soporte técnico.</string>
     <string name="error_no_institutions_available">Usted no tiene instituciones activas, por favor comuníquese con su tutor (profesor) para solucionar el problema.</string>
+    <string name="error_results_not_found">No se han encontrado resultados para este usuario</string>
 
 </resources>

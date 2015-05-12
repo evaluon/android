@@ -36,7 +36,7 @@ import co.gov.inci.evaluon.R;
         put("no_questions_available", R.string.error_no_questions_available);
         put("test_not_found", R.string.error_test_not_found);
         put("user_not_found", R.string.error_user_not_found);
-
+        put("results_not_found", R.string.error_results_not_found);
     }};
 
     String code;
