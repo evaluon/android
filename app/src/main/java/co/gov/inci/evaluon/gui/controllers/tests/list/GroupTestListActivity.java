@@ -12,7 +12,7 @@ public class GroupTestListActivity extends TestListActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new GroupsProxy(this).getTests(getIntent().getIntExtra("id", 0), this);
+        new GroupsProxy(this).getActiveTests(getIntent().getIntExtra("id", 0), this);
     }
 
 }
