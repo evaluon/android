@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import co.gov.inci.evaluon.R;
+import co.gov.inci.evaluon.backend.models.classes.general.Empty;
 import co.gov.inci.evaluon.backend.models.classes.user.Evaluee;
 import co.gov.inci.evaluon.backend.models.proxies.AuthenticationProxy;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiResponse;
@@ -19,7 +20,7 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 public class ResetPasswordActivity extends ActionBarActivity
-        implements View.OnClickListener, Callback<ApiResponse<Void>> {
+        implements View.OnClickListener, Callback<ApiResponse<Empty>> {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +62,7 @@ public class ResetPasswordActivity extends ActionBarActivity
         ).show();
     }
 
-    @Override public void success(ApiResponse<Void> voidApiResponse, Response response) {
+    @Override public void success(ApiResponse<Empty> voidApiResponse, Response response) {
         finish();
         ToastService.success(this);
     }

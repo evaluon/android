@@ -4,6 +4,7 @@ import android.content.Context;
 
 import co.gov.inci.evaluon.backend.models.apisets.Authentication;
 import co.gov.inci.evaluon.backend.models.classes.authentication.Token;
+import co.gov.inci.evaluon.backend.models.classes.general.Empty;
 import co.gov.inci.evaluon.backend.models.classes.user.Evaluee;
 import co.gov.inci.evaluon.backend.models.interfaces.User;
 import co.gov.inci.evaluon.backend.models.proxies.definers.ApiProxy;
@@ -36,7 +37,7 @@ public class AuthenticationProxy extends ApiProxy<Authentication> {
         api.createEvaluee(authorization, evaluee, callback);
     }
 
-    public void resetPassword(String authorization, User user, Callback<ApiResponse<Void>> cb){
+    public void resetPassword(String authorization, User user, Callback<ApiResponse<Empty>> cb){
         api.resetPassword(authorization, user, cb);
     }
 
