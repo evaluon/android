@@ -168,6 +168,7 @@ public class RegisterActivity extends ActionBarActivity
             progressDialog.setMessage(getString(R.string.message_wait));
             progressDialog.setCancelable(false);
             progressDialog.setIndeterminate(true);
+            progressDialog.show();
             api.register(token.toString(), user, this);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
