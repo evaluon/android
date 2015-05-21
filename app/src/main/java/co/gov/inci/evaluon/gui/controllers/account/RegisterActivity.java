@@ -1,5 +1,6 @@
 package co.gov.inci.evaluon.gui.controllers.account;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -44,6 +45,7 @@ public class RegisterActivity extends ActionBarActivity
     private Token userToken;
     private AuthenticationProxy api;
     private ArrayList<FieldValidator> validators;
+    private ProgressDialog progressDialog;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,6 +163,11 @@ public class RegisterActivity extends ActionBarActivity
                     new SimpleDateFormat("yyyy-MM-dd").parse(birthday.getText().toString()),
                     null
             );
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle(R.string.app_name);
+            progressDialog.setMessage(getString(R.string.message_wait));
+            progressDialog.setCancelable(false);
+            progressDialog.setIndeterminate(true);
             api.register(token.toString(), user, this);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
@@ -172,6 +179,7 @@ public class RegisterActivity extends ActionBarActivity
     }
 
     @Override public void failure(RetrofitError error) {
+        progressDialog.dismiss();
         ToastService.error(this, error);
     }
 
@@ -200,6 +208,7 @@ public class RegisterActivity extends ActionBarActivity
             intent.putExtra("password", user.getPassword());
             intent.putExtra("token", userToken);
             setResult(RESULT_OK, intent);
+            progressDialog.dismiss();
             finish();
         }
 
