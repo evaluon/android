@@ -158,7 +158,7 @@ public class UpdateUserActivity extends ActionBarActivity
         lastName.setText(user.getLastName());
 
         final Date userBirthday = user.getBirthday();
-        birthday.setText(new SimpleDateFormat("yyyyMMdd").format(userBirthday));
+        birthday.setText(new SimpleDateFormat("yyyy-MM-dd").format(userBirthday));
 
         if(user.getEvaluee() != null){
             gender.check(Evaluee.genders[user.getEvaluee().getGender()]);
