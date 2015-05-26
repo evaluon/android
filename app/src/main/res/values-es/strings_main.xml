@@ -29,7 +29,7 @@
     <string name="hint_surname">Ingrese los apellidos</string>
 
     <string name="label_birthday">Fecha de nacimiento</string>
-    <string name="hint_birthday">Año, 4 números, guión, Mes, 2 números, guión, Día, 2 números</string>
+    <string name="hint_birthday">Año, 4 números, Mes, 2 números, Día, 2 números</string>
 
     <string name="label_gender">Género</string>
     <string name="option_male">Hombre</string>

@@ -98,7 +98,7 @@ public class RegisterActivity extends ActionBarActivity
         DateValidator birthdayValidator = new DateValidator(
                 this, birthday,
                 R.string.validation_birthday_required,
-                "yyyy-MM-dd"
+                "yyyyMMdd"
         );
         birthday.addTextChangedListener(birthdayValidator);
         birthday.setOnFocusChangeListener(birthdayValidator);
@@ -160,7 +160,7 @@ public class RegisterActivity extends ActionBarActivity
                     lastName.getText().toString(),
                     email.getText().toString(),
                     StringHasher.SHA1(password.getText().toString()),
-                    new SimpleDateFormat("yyyy-MM-dd").parse(birthday.getText().toString()),
+                    new SimpleDateFormat("yyyyMMdd").parse(birthday.getText().toString()),
                     null
             );
             progressDialog = new ProgressDialog(this);

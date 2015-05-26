@@ -4,7 +4,7 @@
     <string name="validation_first_name_required">A first name is required</string>
     <string name="validation_last_name_required">A last name is required</string>
 
-    <string name="validation_birthday_required">A valid birth date is required. Valid format is Year (4 digits) followed by a dash, followed by Month (2 digits), followed by a dash, followed by Day (2 digits).</string>
+    <string name="validation_birthday_required">A valid birth date is required. Valid format is Year, 4 digits, followed by Month, 2 digits, followed by Day, 2 digits.</string>
 
     <string name="validation_mail_required">A valid email address is required</string>
     <string name="validation_pass_required">A password with more than 6 characters is required</string>

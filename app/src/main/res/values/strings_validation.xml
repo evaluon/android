@@ -4,7 +4,7 @@
     <string name="validation_first_name_required">Se requiere ingresar un nombre</string>
     <string name="validation_last_name_required">Se requiere ingresar un apellido</string>
 
-    <string name="validation_birthday_required">Se requiere ingresar una fecha de nacimiento válida. El formato corrrecto es Año (4 dígitos) seguido de un guión, seguido de Mes (2 dígitos), seguido de un guión, seguido de Día (2 dígitos).</string>
+    <string name="validation_birthday_required">Se requiere ingresar una fecha de nacimiento válida. El formato corrrecto es Año, 4 dígitos, seguido de Mes, 2 dígitos, seguido de Día, 2 dígitos.</string>
 
     <string name="validation_mail_required">Se requiere ingresar una dirección de correo válida</string>
     <string name="validation_pass_required">Se requiere ingresar una contraseña mayor a 6 caracteres</string>

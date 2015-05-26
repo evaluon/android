@@ -29,7 +29,7 @@
     <string name="hint_surname">Enter last name</string>
 
     <string name="label_birthday">Birthday</string>
-    <string name="hint_birthday">Year, 4 numbers, dash, Month, 2 numbers, dash, Day, 2 numbers</string>
+    <string name="hint_birthday">Year, 4 numbers, Month, 2 numbers, Day, 2 numbers</string>
 
     <string name="label_gender">Gender</string>
     <string name="option_male">Male</string>

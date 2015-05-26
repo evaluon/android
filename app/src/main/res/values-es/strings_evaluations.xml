@@ -23,7 +23,7 @@
     <string name="message_evaluation_question_types">En el examen se pueden utilizar preguntas de selección múltiple con única respuesta y preguntas abiertas de respuesta corta.</string>
     <string name="message_evaluation_question_type_closed">
         Las preguntas de selección múltiple con única respuesta están conformadas por un enunciado, la formulación de una tarea de evaluación y cuatro opciones de respuesta, codificadas como A, B, C y D, de las cuales sólo una es correcta o válida dada la tarea planteada.\n
-        Puedes desplazarte por las preguntas y respuestas, cuándo quieras responder acertadamente a una opción solo basta un doble click.
+        Puedes desplazarte por las preguntas y respuestas, cuándo quieras responder acertadamente a una opción solo basta un doble toque.
     </string>
     <string name="message_evaluation_question_type_open">
         Las preguntas abiertas de respuesta corta no presentan opciones de respuesta. El estudiante construye (produce, elabora, escribe) una respuesta de acuerdo con la tarea que se le ha asignado, en el espacio definido.\n

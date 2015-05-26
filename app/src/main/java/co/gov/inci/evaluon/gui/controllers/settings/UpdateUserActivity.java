@@ -90,7 +90,7 @@ public class UpdateUserActivity extends ActionBarActivity
         DateValidator birthdayValidator = new DateValidator(
                 this, birthday,
                 R.string.validation_birthday_required,
-                "yyyy-MM-dd"
+                "yyyyMMdd"
         );
         birthday.addTextChangedListener(birthdayValidator);
         birthday.setOnFocusChangeListener(birthdayValidator);
@@ -138,7 +138,7 @@ public class UpdateUserActivity extends ActionBarActivity
                     lastName.getText().toString(),
                     email.getText().toString(),
                     null,
-                    new SimpleDateFormat("yyyy-MM-dd").parse(birthday.getText().toString()),
+                    new SimpleDateFormat("yyyyMMdd").parse(birthday.getText().toString()),
                     null
             );
             new UserProxy(this).update(updateUser, updateCallback);
@@ -158,7 +158,7 @@ public class UpdateUserActivity extends ActionBarActivity
         lastName.setText(user.getLastName());
 
         final Date userBirthday = user.getBirthday();
-        birthday.setText(new SimpleDateFormat("yyyy-MM-dd").format(userBirthday));
+        birthday.setText(new SimpleDateFormat("yyyyMMdd").format(userBirthday));
 
         if(user.getEvaluee() != null){
             gender.check(Evaluee.genders[user.getEvaluee().getGender()]);
