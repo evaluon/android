@@ -33,10 +33,13 @@ public class TestPasswordActivity extends ActionBarActivity
     }
 
     @Override public void onClick(View v) {
-        Test t = new Test(
-                Integer.parseInt(((EditText) findViewById(R.id.text_password)).getText().toString())
-        );
-        new TestsProxy(this).openTest(testId, t, this);
+
+        String code = ((EditText) findViewById(R.id.text_password)).getText().toString();
+        if(code.length() != 6) ToastService.byResource(this, R.string.error_invalid_hotp_code);
+        else {
+            Test t = new Test(Integer.parseInt(code));
+            new TestsProxy(this).openTest(testId, t, this);
+        }
     }
 
     @Override public void success(ApiResponse<Void> voidApiResponse, Response response) {
