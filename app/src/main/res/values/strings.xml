@@ -10,7 +10,7 @@
 
     <!-- API -->
     <string name="endpointUrl" translatable="false">http://186.154.240.187:3004</string>
-    <string name="cdnUrl" translatable="false">http://cdn.gentebool.com/evaluon</string>
+    <string name="cdnUrl" translatable="false">http://186.154.240.187:1045/</string>
     <string name="placeHoldItUrl" translatable="false">http://placehold.it/180/FFFFFF/00427a&amp;text=</string>
     <string name="client_id" translatable="false">administrator</string>
     <string name="client_secret" translatable="false">kv0Ls8xoIFPdE2GXMK5fodQsAEBV5GzzINZOA0NX99E=</string>
